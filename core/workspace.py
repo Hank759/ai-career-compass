@@ -79,9 +79,10 @@ def export_workspace(state):
 def restore_workspace(state,value):
     clean=validate_workspace(value)  # fully validate before changing session state
     for key in list(state):
-        if key.startswith(('check_','plan_weeks_','target_income_','scenario_months_','scenario_cost_','retained_income_','planning_','qualification_status_','qualification_notes_')) or key in ('skill_weight','recommendation_target'):
+        if key.startswith(('check_','plan_weeks_','target_income_','scenario_months_','scenario_cost_','retained_income_','planning_','qualification_status_','qualification_notes_')) or key in ('skill_weight','recommendation_target','career_compare_codes','run_career_sensitivity'):
             del state[key]
     state.pop('report_prepared_target',None)
+    state.pop('career_sensitivity_requested',None)
     state.pop('plan_unavailable_target',None)
     state['scenario_comparisons']=clean.get('scenario_comparisons',[])
     state['profile']=clean['profile']

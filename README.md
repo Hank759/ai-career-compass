@@ -66,3 +66,23 @@ qualification reviews. Regional Analysis compares nominal and price-adjusted wag
 Simulator cash flows remain nominal USD. Missing prices, wages and educational
 references are never filled with inferred requirements or zeroes. See
 `docs/PRIORITY_FEATURES.md` for matching rules, source coverage and limitations.
+
+## Career trade-offs and sensitivity (4.6)
+
+Career Recommendations provides a side-by-side view of two or three careers from
+the same scoring group. It preserves raw exposure units, shows educational paths
+and learning priorities, and displays fees or duration only for a currently saved
+scenario. Chosen occupations are included in complete workspace backups.
+
+An optional sensitivity check changes one assessed skill at a time by one point,
+clipped to 0–5, and tests adjacent skill weights (±0.05) only when all candidates
+have wage data. The candidate set is fixed. Score ranks round at 12 decimal places
+to avoid floating-point noise; ties share ranks. Best/worst ranks and counts in the
+top-10 score band are deterministic test results, not confidence, probabilities,
+or a complete uncertainty analysis. Weight changes that add new candidate groups
+are outside this check. Current-session requested analysis and selected comparison
+careers appear in JSON, Markdown and printable HTML reports. Sensitivity results
+are recomputed from current inputs, not restored as authoritative cached outputs.
+
+Scoring details, price methodology and education/qualification editing are grouped
+in expanders, keeping the main shortlist, target selection and exposure visible.

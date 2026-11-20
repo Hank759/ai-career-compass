@@ -13,7 +13,7 @@ def validate_profile(p):
     if not isinstance(p,dict) or p.get('version')!=1:
         raise ValueError('Unsupported profile format')
     allowed={'version','name','current_soc','annual_income','desired_income','weekly_hours','history','ratings',
-        'education_category','planned_education','education_filter','qualification_reviews','exclude_qualification_gaps','preferred_region'}
+        'education_category','planned_education','education_filter','qualification_reviews','exclude_qualification_gaps','preferred_region','comparison_codes'}
     if set(p)-allowed:
         raise ValueError('Unknown profile fields')
     if not isinstance(p.get('current_soc'),str) or p.get('current_soc') not in set(d.catalog().code):
@@ -38,6 +38,9 @@ def validate_profile(p):
     reviews=p.get('qualification_reviews',{})
     if not isinstance(reviews,dict) or len(reviews)>830:raise ValueError('Invalid qualification reviews')
     known=set(d.catalog().code)
+    choices=p.get('comparison_codes',[])
+    if not isinstance(choices,list) or len(choices)>3 or any(not isinstance(code,str) or code not in known for code in choices) or len(set(choices))!=len(choices):
+        raise ValueError('Compare at most three known occupations')
     for code,review in reviews.items():
         if code not in known or not isinstance(review,dict) or set(review)!={'status','notes'} or review['status'] not in pathways.REVIEWS or not isinstance(review['notes'],str) or len(review['notes'])>2000:
             raise ValueError('Invalid qualification review')

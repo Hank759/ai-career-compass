@@ -46,6 +46,16 @@ def render(payload):
         from core.pathways import categories
         names=categories()
         sections.append('<p>Current education: '+value(names.get(preferences.get('education_category'),'Not entered'))+'. Planned categories: '+value('; '.join(names.get(code,code) for code in (preferences.get('planned_education') or [])) or 'None')+'. Filter: '+value(preferences.get('education_filter') or 'All education pathways')+'.</p>')
+    if payload.get('career_side_by_side'):
+        import pandas as pd
+        from core.comparison_tools import display_comparison
+        comparison=display_comparison(pd.DataFrame(payload['career_side_by_side']),adjusted)
+        sections.append('<h2>Selected careers side by side</h2>'+table(comparison.to_dict('records'),[(name,name) for name in comparison.columns]))
+        sections.append('<p>Comparison scores use 0–100 units here. Exposure indices retain source units. Blank scenario costs or durations mean no current saved scenario; no training prices or qualification times are inferred.</p>')
+    sensitivity=payload.get('sensitivity_analysis')
+    if sensitivity:
+        sections.append('<h2>Input sensitivity</h2>'+table(sensitivity['summary'],[('occupation','Occupation'),('saved_score_rank','Saved score rank'),('best_tested_rank','Best tested rank'),('worst_tested_rank','Worst tested rank'),('top_10_band_cases','Top-10 score band (cases)'),('tested_cases','Tested cases')]))
+        sections.append('<p>'+value(sensitivity['method'])+'</p>')
     for row in payload.get('preparation_references',[]):
         sections.append('<h3>'+value(row['Title'])+' · '+value(row['O*NET-SOC Code'])+'</h3>')
         ref=row.get('reference')

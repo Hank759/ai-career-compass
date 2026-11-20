@@ -40,3 +40,7 @@ Official access/sharing guide: https://docs.streamlit.io/deploy/streamlit-commun
 ## Usability update
 
 Home now offers Start guided example without file transfer. Replacing an existing session requires confirmation and keeps an in-session return copy; export a permanent backup first. Career comparisons explain their score basis. Transition Simulator supports up to five named comparison snapshots, CSV export and removal. Version-2 workspace backups include comparisons; version-1 backups still import. Updating a profile clears snapshots calculated for the old baseline.
+
+## Skill table
+
+Career Dashboard now shows Skill, Importance (1–5) and Skill category. Categories preserve the source table grouping; they do not create separate ranking weights. Category filtering, show-all and CSV download are available. Source identifiers, dates and rating origins remain in Skill source details.

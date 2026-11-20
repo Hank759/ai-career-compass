@@ -72,8 +72,29 @@ def dashboard(soc,version):
         st.write(profiles.set_index('code').loc[code,'description'])
         skill=load('skills',version,code)
         st.subheader('Skill importance')
-        st.caption('Importance (IM) only; suppressed/not-relevant rows excluded. Essential and transferable skills retain their original families and dates.')
-        st.dataframe(skill.head(20),hide_index=True,alt='Top available O*NET skill importance ratings for the selected specialization')
+        st.caption('O*NET importance describes how important a skill is to this occupation. It is not your proficiency, a hiring threshold or an AI exposure score.')
+        st.markdown('**Skill category:** Essential includes foundational skills such as reading and active listening. Transferable includes cross-functional skills such as problem solving and service orientation. Neither category is automatically more important, and category labels do not add a separate recommendation weight.')
+        if skill.empty:
+            st.info('No usable skill importance ratings are available for this profile.')
+        else:
+            category=st.segmented_control('Skill category',['All skills','Essential','Transferable'],default='All skills',key='dashboard_skill_category') or 'All skills'
+            selected=skill if category=='All skills' else skill[skill.family==category]
+            show_all=st.toggle('Show all available skills',key='dashboard_skills_all')
+            visible=selected if show_all else selected.head(20)
+            st.caption(f'Showing {len(visible)} of {len(selected)} available skills in this selection, ordered by importance. Suppressed and not-relevant rows are excluded.')
+            if visible.empty:
+                st.info('No ratings are available in this skill category.')
+            else:
+                summary=visible[['skill','importance','family']].rename(columns={'skill':'Skill','importance':'Importance','family':'Skill category'})
+                st.dataframe(summary,hide_index=True,column_config={
+                    'Importance':st.column_config.NumberColumn('Importance (1–5)',format='%.2f',help='O*NET IM importance: 1 = not important; 5 = extremely important. This is not a personal proficiency rating.')},
+                    alt='Occupational skill importance and category for the selected profile')
+                st.download_button('Download selected skills',selected.rename(columns={'family':'skill_category'}).to_csv(index=False).encode('utf-8-sig'),
+                    'occupation_skills.csv','text/csv',key='download_dashboard_skills')
+            with st.expander('Skill source details'):
+                details=selected.rename(columns={'element_id':'Skill ID','skill':'Skill','importance':'Importance','date':'Source date','domain_source':'Rating source','family':'Skill category'})
+                st.dataframe(details,hide_index=True,alt='Source identifiers, dates and rating origins for the selected skills')
+                st.caption('The source date belongs to the skill rating, not to the wage data. Rating source identifies the source type recorded by O*NET. Skill category preserves the original Essential Skills or Transferable Skills table grouping.')
 
 
 def exposure_panel(soc,version,context='Career Dashboard'):

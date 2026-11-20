@@ -8,6 +8,7 @@ from core import planning as p
 from core import workspace as ws
 from core import learning_tasks as learning
 from core import preparation
+from core import pathways, regional
 
 @st.cache_data(ttl=300,max_entries=16)
 def reference(kind,version):
@@ -21,7 +22,7 @@ def save_profile(profile):
     p.validate_profile(profile)
     if profile!=st.session_state.get('profile'):
         for key in list(st.session_state):
-            if key.startswith(('target_income_','scenario_months_','scenario_cost_','retained_income_','check_','plan_weeks_')):
+            if key.startswith(('target_income_','scenario_months_','scenario_cost_','retained_income_','check_','plan_weeks_','qualification_status_','qualification_notes_')):
                 del st.session_state[key]
         st.session_state['scenario_comparisons']=[]
         st.session_state.pop('saved_scenario',None)
@@ -77,8 +78,8 @@ def profile_page(version):
     upload=st.file_uploader('Restore a profile or complete workspace (JSON)',type=['json'],key='profile_upload')
     if upload is not None and st.button('Import profile',key='import_profile'):
         try:
-            if upload.size>200000:
-                raise ValueError('Profile must be smaller than 200 KB')
+            if upload.size>10000000:
+                raise ValueError('Profile or workspace must be smaller than 10 MB')
             value=json.loads(upload.getvalue())
             if isinstance(value,dict) and value.get('kind')=='career_workspace':
                 ws.restore_workspace(st.session_state,value)
@@ -95,13 +96,34 @@ def profile_page(version):
     current=saved.get('current_soc','15-1252')
     ref=ref.copy();ref['rating']=pd.Series(ref.id.map(saved.get('ratings',{})),dtype='float64')
     rev=st.session_state.get('profile_revision',0)
+    st.subheader('Preferred labour market')
+    market=saved.get('preferred_region',{'scope':'National','area':None,'wage_basis':'Nominal USD'})
+    scopes=['National','State','Metro']
+    scope=st.selectbox('Recommendation geography',scopes,index=scopes.index(market['scope']),key=f'profile_region_scope_{rev}')
+    area=None;wage_basis='Nominal USD'
+    if scope!='National':
+        areas=d.options(scope,'area');area_codes=list(areas.code);area_titles=areas.set_index('code').title.to_dict()
+        previous_area=market.get('area')
+        area=st.selectbox('Preferred area',area_codes,index=area_codes.index(previous_area) if previous_area in area_codes else 0,format_func=lambda code:area_titles[code],key=f'profile_region_area_{scope}_{rev}')
+        wage_basis=st.selectbox('Wage basis for recommendations',['Nominal USD','Price-adjusted proxy'],index=int(market.get('wage_basis')=='Price-adjusted proxy'),key=f'profile_region_basis_{scope}_{rev}')
+        st.caption(regional.explanation())
+        if wage_basis=='Price-adjusted proxy':st.info('Enter your desired income below as a U.S.-average purchasing-power target. Your current income and simulator amounts remain nominal USD. The simulator does not automatically use this adjusted proxy.')
+    st.caption('Save the profile form below to apply these geography choices. Regional rankings include occupations with published records for the selected area; they are not vacancy or job-demand forecasts.')
     with st.form('personal_form_'+str(rev)):
         name=st.text_input('Name or nickname (optional)',value=saved.get('name',''),max_chars=100,key=f'profile_name_{rev}')
         soc=st.selectbox('Current occupation',codes,index=codes.index(current) if current in codes else 0,format_func=lambda x:f'{x} — {titles[x]}',key=f'profile_current_{rev}')
         income=st.number_input('Your current annual income (USD; 0 if none)',min_value=0.0,max_value=100000000.0,value=float(saved.get('annual_income',0)),step=1000.0,key=f'profile_income_{rev}')
-        desired=st.number_input('Desired annual income (USD; 0 to omit wage preference)',min_value=0.0,max_value=100000000.0,value=float(saved.get('desired_income',0)),step=1000.0,key=f'profile_desired_{rev}')
+        desired_label='Desired annual purchasing power (US-average price units; 0 to omit)' if wage_basis=='Price-adjusted proxy' else 'Desired annual income (USD; 0 to omit wage preference)'
+        desired=st.number_input(desired_label,min_value=0.0,max_value=100000000.0,value=float(saved.get('desired_income',0)),step=1000.0,key=f'profile_desired_{rev}')
         hours=st.number_input('Learning hours available per week',min_value=0.5,max_value=168.0,value=float(saved.get('weekly_hours',5)),step=0.5,key=f'profile_hours_{rev}')
         history=st.text_area('Career history and interests (optional; for your plan/report, not scored)',value=saved.get('history',''),max_chars=5000,key=f'profile_history_{rev}')
+        st.subheader('Education and qualification preferences')
+        education=pathways.categories();education_options=[None,*education]
+        attained=st.selectbox('Completed education category (optional)',education_options,index=education_options.index(saved.get('education_category')),format_func=lambda code:education.get(code,'Not entered'),key=f'profile_education_{rev}')
+        planned=st.multiselect('Education categories you are willing to pursue',list(education),default=saved.get('planned_education',[]),format_func=education.get,key=f'profile_planned_education_{rev}')
+        education_filter=st.selectbox('Education pathway filter for recommendations',pathways.FILTERS,index=pathways.FILTERS.index(saved.get('education_filter',pathways.FILTERS[0])),key=f'profile_education_filter_{rev}')
+        exclude_gaps=st.checkbox('Exclude occupations I marked as needing additional qualification',value=saved.get('exclude_qualification_gaps',False),key=f'profile_exclude_qualification_{rev}')
+        st.caption('Education matching compares your selected categories with modal O*NET survey responses, separately by specialization. It is an optional planning filter, not a mandatory degree rule or a credential verification. Save target-specific qualification reviews on Career Recommendations.')
         st.subheader('Your skill self-assessment')
         st.write('Rate at least three skills: 0 = no familiarity, 5 = very confident. Leave unassessed skills blank. These are your self-ratings, not O*NET proficiency requirements.')
         st.caption('Self-rating guide: 0 = unfamiliar; 1–2 = need support; 3 = independent with basic tasks; 4–5 = confident. This is a self-assessment, not an official qualification scale.')
@@ -112,7 +134,10 @@ def profile_page(version):
     if submitted:
         ratings={str(r.id):float(r.rating) for r in edited.itertuples() if pd.notna(r.rating)}
         save_profile({'version':1,'name':name,'current_soc':soc,'annual_income':income,'desired_income':desired,
-                      'weekly_hours':hours,'history':history,'ratings':ratings})
+                      'weekly_hours':hours,'history':history,'ratings':ratings,
+                      'education_category':attained,'planned_education':planned,'education_filter':education_filter,
+                      'exclude_qualification_gaps':exclude_gaps,'qualification_reviews':saved.get('qualification_reviews',{}),
+                      'preferred_region':{'scope':scope,'area':area,'wage_basis':wage_basis}})
         st.success(f'Profile saved with {len(ratings)} assessed skills.')
     if st.session_state.get('profile'):
         bundle=ws.export_workspace(st.session_state)
@@ -144,17 +169,22 @@ def history_page(version):
 def recommendations(profile,m):
     st.caption('A transparent comparison tool, not a prediction of suitability, job availability or hiring success. Your history/interests text is not scored.')
     weight=st.slider('Weight on assessed-skill alignment',0.0,1.0,float(st.session_state.get('recommendation_weight',.8)),0.05,key='skill_weight')
-    st.caption('The remaining weight goes to national median wage / desired wage, capped at 1. A zero wage goal or 100% skill weight uses skills only. When wage contributes to the score, occupations without a wage estimate are shown separately. Unassessed skills are excluded rather than treated as zero.')
+    st.caption('The remaining weight goes to the selected labour-market wage benchmark / desired wage, capped at 1. A zero wage goal or 100% skill weight uses skills only. When wage contributes to the score, occupations without a usable wage value are shown separately. Unassessed skills are excluded rather than treated as zero.')
     if len(profile['ratings'])<3:
         st.info('Return to Personal Profile and assess at least three skills to generate comparisons.');return
     st.session_state['recommendation_weight']=weight
     if len(set(profile['ratings'].values()))==1:
         st.warning('All assessed skills have the same rating, so they provide little differentiation between occupations. Add varied assessments where justified; tied scores are ordered by SOC code, not evidence of better suitability.')
-    result,supplementary,basis=p.comparison_groups(profile,m,weight)
+    wages,context=regional.recommendation_inputs(profile)
+    st.subheader('Your comparison settings')
+    st.write(f'Labour market: {context.get("area_title",context["scope"])} · Wage basis: {context["basis"]} · Education filter: {profile.get("education_filter",pathways.FILTERS[0])}.')
+    st.caption('Change geography, education and qualification filters in Personal Profile, then save. Qualification reviews are self-reported; the app does not verify licences.')
+    if context['basis']=='Price-adjusted proxy':st.caption(regional.explanation())
+    result,supplementary,basis=p.comparison_groups(profile,m,weight,wages)
     st.info(f'Current comparison basis: {basis}. {len(result)} occupations use this same scoring basis.')
     if not supplementary.empty:
-        with st.expander(f'{len(supplementary)} additional occupations without wage estimates'):
-            st.caption('These occupations are excluded from the combined ranking. Their assessed-skill alignment remains available below; move the skill weight to 1.0 to compare all occupations using skills alone.')
+        with st.expander(f'{len(supplementary)} additional occupations without wage estimates or required prices'):
+            st.caption('These occupations lack a usable wage value for the selected basis and are excluded from the combined ranking. Their assessed-skill alignment remains available below; move the skill weight to 1.0 to compare all occupations with published area records using skills alone.')
             st.dataframe(supplementary[['code','occupation','skill_alignment','assessment_coverage']].rename(columns={'skill_alignment':'Skill alignment (0–1)','assessment_coverage':'Assessment coverage (0–1)'}),hide_index=True,alt='Supplementary skill-only evidence for occupations without published wages')
     if not result.empty and float(result.assessment_coverage.max())<0.25:
         st.warning('Fewer than a quarter of reference skills are assessed. More assessments will make the comparison better informed.')
@@ -162,18 +192,19 @@ def recommendations(profile,m):
     display=top.copy()
     for col in ['comparison_score','skill_alignment','assessment_coverage','wage_preference']:
         display[col]=(display[col]*100).round(1)
-    st.dataframe(display,hide_index=True,column_order=['occupation','comparison_score','assessment_coverage','median_wage','exposure_ai','exposure_language','exposure_image'],column_config={
+    st.dataframe(display,hide_index=True,column_order=['occupation','comparison_score','assessment_coverage','median_wage','education_pathway','qualification_review','exposure_ai','exposure_language','exposure_image'],column_config={
         'code':'SOC code','occupation':'Occupation','comparison_score':st.column_config.NumberColumn('Comparison score / 100',format='%.1f'),
         'skill_alignment':st.column_config.NumberColumn('Assessed-skill alignment / 100',format='%.1f'),
         'assessment_coverage':st.column_config.NumberColumn('Skills assessed (%)',format='%.1f'),
         'wage_preference':st.column_config.NumberColumn('Wage preference / 100',format='%.1f'),
-        'median_wage':st.column_config.NumberColumn('National median annual wage (USD)',format='$%.0f'),
+        'median_wage':st.column_config.NumberColumn('Wage proxy (US-average price units)' if context['basis']=='Price-adjusted proxy' else 'Median annual wage (USD)',format='$%.0f'),
+        'education_pathway':'Education pathway','qualification_review':'Qualification review (self-reported)',
         'employment':'Published employment','exposure_ai':'AI exposure','exposure_language':'Language exposure','exposure_image':'Image exposure'},
         alt='Career comparisons with heuristic scores, assessed-skill coverage and national wage benchmarks')
     st.caption('Exposure columns show raw source indices (general AI, language model and image generation), not percentages; blanks mean unavailable. Exposure is displayed for comparison, not used as a job-loss penalty in the ranking.')
     st.caption('Score and coverage columns are on a 0–100 scale, not probabilities. Low assessment coverage limits the comparison. Occupations without usable skill data are excluded; all wage records remain available in Career Dashboard.')
     if top.empty:
-        st.info('No comparable occupations have sufficient reference data.');return
+        st.info('No occupations match the current evidence and filter settings. Relax the education filter, review your qualification notes, change area, or use nominal wages / skills-only scoring. No missing wage or price estimate is replaced with zero.');return
     selections=top
     previous=st.session_state.get('planning_target')
     if previous and previous not in set(top.code):
@@ -196,6 +227,7 @@ def recommendations(profile,m):
     from core.data_ui import exposure_panel
     exposure_panel(target,d.fingerprint(),'Career Recommendations')
     preparation.panel(target)
+    pathways.panel(profile,target)
     gap=p.gaps(profile,target,m)
     important=gap.dropna(subset=['self_rating']).head(8)
     if not important.empty:
@@ -208,11 +240,18 @@ def recommendations(profile,m):
 def simulator(profile,target,cat):
     row=cat[cat.code==target].iloc[0]
     bench=None if pd.isna(row.median_wage) else float(row.median_wage)
+    market=profile.get('preferred_region') or {'scope':'National'}
+    location='National'
+    if market['scope']!='National':
+        local=regional.wage_catalog(market['scope'],market['area'])
+        selected=local[local.code==target]
+        bench=None if selected.empty or pd.isna(selected.iloc[0].median_wage) else float(selected.iloc[0].median_wage)
+        location=local.iloc[0].area_title if not local.empty else market['area']
     st.caption('Deterministic planning assumptions, not a salary or employment forecast. Costs and income are nominal USD.')
     if bench is None:
-        st.info('No published median annual wage exists for this occupation. Enter your own post-transition income assumption.')
+        st.info(f'No published median annual wage is available for this occupation in {location}. Enter your own post-transition income assumption.')
     else:
-        st.write(f'National 2025 median wage benchmark: ${bench:,.0f}. You can change the assumption below.')
+        st.write(f'{location} · 2025 nominal median wage benchmark: ${bench:,.0f}. You can change the assumption below. Price-adjusted proxies are not used as cash income in this simulator.')
     previous=st.session_state.get('saved_scenario') or {}
     if previous.get('target')!=target:
         previous={}
@@ -323,11 +362,23 @@ def personal_report(profile,target,m):
     payload['recommendation_skill_weight']=weight
     payload['comparison_basis']='Unavailable: assess at least three skills'
     payload['comparison_summary']=[]
+    wages,context=regional.recommendation_inputs(profile)
+    payload['recommendation_geography']=context
     if len(profile['ratings'])>=3:
-        ranked,_,basis=p.comparison_groups(profile,m,weight)
+        ranked,_,basis=p.comparison_groups(profile,m,weight,wages)
         payload['comparison_basis']=basis
         payload['comparison_summary']=json.loads(ranked.head(10).to_json(orient='records'))
+    payload['education_preferences']={k:profile.get(k) for k in ['education_category','planned_education','education_filter','exclude_qualification_gaps']}
+    payload['target_qualification_review']=profile.get('qualification_reviews',{}).get(target,{'status':pathways.REVIEWS[0],'notes':''})
+    payload['methodology']['education']='Optional exact category matching to modal education survey responses for at least one O*NET specialization. Ties retained; not a degree, subject or credential equivalence assessment. Qualification reviews are self-reported.'
+    payload['methodology']['regional_prices']=regional.explanation()
+    payload['methodology']['recommendations']='Heuristic assessed-skill alignment plus an optional wage preference for the selected labour market and wage basis. Education and self-reported qualification preferences are filters, not extra numerical scores. Exposure is not a ranking term.'
+    payload['methodology']['wages']='May 2025 nominal published wages for the selected region, or national wages when National is selected. Regional price-adjusted comparisons use a 2024 RPP proxy; simulator cash income always remains nominal USD.'
     preparation.panel(target)
+    st.subheader('Your education and qualification notes')
+    st.write('Education category: '+pathways.categories().get(profile.get('education_category'),'Not entered'))
+    st.write(payload['target_qualification_review']['status'])
+    st.text(payload['target_qualification_review']['notes'] or 'No qualification notes entered.')
     st.subheader(payload['target']['title'])
     st.write(f'Profile: {profile["name"] or "Unnamed"} · Assessed skills: {len(profile["ratings"])}')
     st.dataframe(pd.DataFrame(payload['skill_priorities']),hide_index=True,alt='Personal report skill-priority summary')
@@ -346,12 +397,13 @@ def personal_report(profile,target,m):
     lines=['# Personal career planning report','',f'Target: {target} — {payload["target"]["title"]}',
            f'Profile: {profile["name"] or "Unnamed"}',f'Current occupation: {profile["current_soc"]}',
            f'Current annual income (user input, USD): {profile["annual_income"]}',
-           f'Desired annual income (user input, USD): {profile["desired_income"]}',
+           f'Desired wage or purchasing-power target (units follow selected wage basis): {profile["desired_income"]}',
            f'Learning hours per week: {profile["weekly_hours"]}','', '## Career history and interests',profile['history'],'','## Skill priorities']
     for r in payload['skill_priorities']:
         lines.append(f'- {r["skill"]}: importance {r["importance"]:.2f}; self-rating {r["self_rating"]}; priority {r["priority"]}')
     lines+=['','## Education, experience and training references',json.dumps(payload['preparation_references'],ensure_ascii=False,indent=2),'','## Comparison basis',payload['comparison_basis'],'','## Target AI exposure (raw source indices)',json.dumps(payload['target_exposure'],ensure_ascii=False,indent=2),'','## Career comparison summary',json.dumps(payload['comparison_summary'],ensure_ascii=False,indent=2),f'Skill weight: {weight}','','## Scenario',json.dumps(saved,ensure_ascii=False,indent=2),'','## Saved comparison scenarios for this target',json.dumps(payload['scenario_comparisons'],ensure_ascii=False,indent=2),'','## Learning plan and completion evidence',json.dumps(payload['learning_plan'],ensure_ascii=False,indent=2),'','## Completed learning tasks',json.dumps(payload['completed_tasks'],indent=2),'','## Methods and limitations']
     lines += [f'- {k}: {v}' for k,v in payload['methodology'].items()]
+    lines += ['','## Recommendation geography and wage basis',json.dumps(payload.get('recommendation_geography'),indent=2),'','## Education preferences',json.dumps(payload['education_preferences'],indent=2),'','## Self-reported qualification review',json.dumps(payload['target_qualification_review'],ensure_ascii=False,indent=2)]
     st.download_button('Download readable report (Markdown)','\n'.join(lines).encode('utf-8'),'career_report.md','text/markdown',key='download_report_md')
     st.session_state['report_prepared_target']=target
     st.caption('Exports include your personal inputs; keep them private. The report is a planning aid and contains its calculation assumptions and limitations.')

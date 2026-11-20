@@ -56,3 +56,13 @@ Planning pages include a quick complete-workspace backup. A printable report is
 not a workspace restore file. Target selection follows the user across planning
 pages. A changed profile clears obsolete scenario form inputs. A plan with no
 usable learning tasks is not counted as a prepared learning plan.
+
+## Education and regional planning (4.5)
+
+Personal Profile now saves completed/planned education, explicit pathway filters,
+and a preferred state or metro area. Career Recommendations uses the selected
+area's wages, with optional BEA price-adjusted proxies, and supports self-reported
+qualification reviews. Regional Analysis compares nominal and price-adjusted wages.
+Simulator cash flows remain nominal USD. Missing prices, wages and educational
+references are never filled with inferred requirements or zeroes. See
+`docs/PRIORITY_FEATURES.md` for matching rules, source coverage and limitations.

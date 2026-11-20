@@ -12,10 +12,11 @@ def skill_reference():
 def validate_profile(p):
     if not isinstance(p,dict) or p.get('version')!=1:
         raise ValueError('Unsupported profile format')
-    allowed={'version','name','current_soc','annual_income','desired_income','weekly_hours','history','ratings'}
+    allowed={'version','name','current_soc','annual_income','desired_income','weekly_hours','history','ratings',
+        'education_category','planned_education','education_filter','qualification_reviews','exclude_qualification_gaps','preferred_region'}
     if set(p)-allowed:
         raise ValueError('Unknown profile fields')
-    if p.get('current_soc') not in set(d.catalog().code):
+    if not isinstance(p.get('current_soc'),str) or p.get('current_soc') not in set(d.catalog().code):
         raise ValueError('Select a published occupation')
     for k,high in [('annual_income',1e8),('desired_income',1e8),('weekly_hours',168)]:
         v=p.get(k)
@@ -23,6 +24,31 @@ def validate_profile(p):
             raise ValueError(f'Invalid {k}')
     if p['weekly_hours']<0.5:
         raise ValueError('Weekly learning hours must be at least 0.5')
+    from core import pathways
+    categories=set(pathways.categories())
+    if p.get('education_category') is not None and (not isinstance(p['education_category'],str) or p['education_category'] not in categories):
+        raise ValueError('Unknown education category')
+    planned=p.get('planned_education',[])
+    if not isinstance(planned,list) or len(planned)>12 or any(not isinstance(v,str) or v not in categories for v in planned) or len(set(planned))!=len(planned):
+        raise ValueError('Invalid planned education categories')
+    if p.get('education_filter',pathways.FILTERS[0]) not in pathways.FILTERS:
+        raise ValueError('Invalid education filter')
+    if not isinstance(p.get('exclude_qualification_gaps',False),bool):
+        raise ValueError('Invalid qualification filter')
+    reviews=p.get('qualification_reviews',{})
+    if not isinstance(reviews,dict) or len(reviews)>830:raise ValueError('Invalid qualification reviews')
+    known=set(d.catalog().code)
+    for code,review in reviews.items():
+        if code not in known or not isinstance(review,dict) or set(review)!={'status','notes'} or review['status'] not in pathways.REVIEWS or not isinstance(review['notes'],str) or len(review['notes'])>2000:
+            raise ValueError('Invalid qualification review')
+    region=p.get('preferred_region')
+    if region is not None:
+        if not isinstance(region,dict) or set(region)!={'scope','area','wage_basis'} or region['scope'] not in ('National','State','Metro') or region['wage_basis'] not in ('Nominal USD','Price-adjusted proxy'):
+            raise ValueError('Invalid preferred region')
+        if region['scope']=='National':
+            if region['area'] is not None or region['wage_basis']!='Nominal USD':raise ValueError('National comparisons use nominal USD')
+        elif not isinstance(region['area'],str) or region['area'] not in set(d.options(region['scope'],'area').code):
+            raise ValueError('Unknown preferred area')
     for k,size in [('name',100),('history',5000)]:
         if not isinstance(p.get(k),str) or len(p[k])>size:
             raise ValueError(f'Invalid {k}')
@@ -49,7 +75,7 @@ def wage_catalog():
        FROM raw_national_m2025_dl r JOIN sources s ON s.table_name='raw_national_m2025_dl'
        JOIN bls_observations b ON b.source_id=s.id AND b.source_row=r._src_row WHERE r.O_GROUP='detailed' ''')
 
-def recommend(profile,m,weight=0.8):
+def recommend(profile,m,weight=0.8,wages=None):
     validate_profile(profile)
     if len(profile['ratings'])<3:
         raise ValueError('Assess at least three skills first; leave unknown skills blank')
@@ -63,7 +89,8 @@ def recommend(profile,m,weight=0.8):
     denominator=w.sum(axis=1,min_count=1).replace(0,float('nan'))
     alignment=w.mul(ratings[common]).sum(axis=1,min_count=1)/denominator
     coverage=w.notna().mul(1).sum(axis=1)/m.notna().sum(axis=1)
-    out=wage_catalog().merge(pd.DataFrame({'skill_alignment':alignment,'assessment_coverage':coverage}),left_on='code',right_index=True,how='inner')
+    wages=wage_catalog() if wages is None else wages
+    out=wages.merge(pd.DataFrame({'skill_alignment':alignment,'assessment_coverage':coverage}),left_on='code',right_index=True,how='inner')
     out=out[out.code!=profile['current_soc']].copy()
     goal=profile['desired_income']
     out['wage_preference']=out.median_wage.div(goal).clip(upper=1) if goal>0 else float('nan')
@@ -80,9 +107,10 @@ def recommend(profile,m,weight=0.8):
     return out.dropna(subset=['comparison_score']).sort_values(['comparison_score','code'],ascending=[False,True]).reset_index(drop=True)
 
 
-def comparison_groups(profile,m,weight=0.8):
+def comparison_groups(profile,m,weight=0.8,wages=None):
     """Rank only rows with the same evidence basis; retain unavailable-wage rows separately."""
-    result=recommend(profile,m,weight)
+    from core.pathways import annotate
+    result=annotate(recommend(profile,m,weight,wages),profile)
     combined=profile['desired_income']>0 and weight<1
     if combined:
         ranked=result[result.wage_preference.notna()].copy()

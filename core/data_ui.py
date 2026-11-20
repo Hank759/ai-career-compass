@@ -27,6 +27,8 @@ def render(page):
         elif page=='Regional Analysis':
             scope=st.selectbox('Geography',['State','Metro'],key='region_scope')
             df=load('observations',version,scope,soc)
+            from core.regional import comparison_panel
+            comparison_panel(df,scope)
             show_observations(df)
             st.caption('May 2025 · Cross-industry · Ownership 1235. Areas are separate comparisons; no combined employment total is calculated.')
         elif page=='Industry Analysis':
@@ -128,7 +130,7 @@ def exposure_panel(soc,version,context='Career Dashboard'):
 def methodology(version):
     st.subheader('Geographic scope and currency')
     st.info('This version uses U.S. occupational and labour-market data, including territories where the source publishes them. All wage and scenario amounts are USD. It is not a Hong Kong or mainland China labour-market model.')
-    st.write('BLS supplies employment and wages; O*NET supplies occupational skills; Felten supplies exposure indices linked through U.S. SOC classifications. BEA regional price data is retained in the local research archive but is not currently used to adjust displayed wages.')
+    st.write('BLS supplies employment and wages; O*NET supplies skills and education response distributions; Felten supplies exposure indices. Regional Analysis offers a purchasing-power proxy using bundled 2024 BEA all-items regional price parities against 2025 wages. National and industry wages remain nominal.')
     st.subheader('Source selection')
     policy=pd.DataFrame([{'View':k,'Source':v[1]} for k,v in data.TABLES.items()])
     st.dataframe(policy,hide_index=True,alt='Source file selected for each application view')

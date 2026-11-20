@@ -19,17 +19,33 @@ def table(rows,columns):
 
 def render(payload):
     profile=payload['profile'];target=payload['target']
+    context=payload.get('recommendation_geography') or {}
+    adjusted=context.get('basis',(profile.get('preferred_region') or {}).get('wage_basis'))=='Price-adjusted proxy'
+    goal_label='Desired purchasing power (US-average price units)' if adjusted else 'Desired annual income (USD)'
+    wage_label='Price-adjusted wage proxy (US-average price units)' if adjusted else 'Median annual wage (USD)'
     sections=['<h1>AI Career Compass</h1><p class="subtitle">Personal career planning report · U.S. data · USD</p>',
         '<h2>'+escape(target['title'])+' <small>'+escape(target['code'])+'</small></h2>',
         '<p>Prepared for: '+value(profile['name'] or 'Unnamed learner')+'</p>',
         '<p>This report is a planning aid. Scores are not hiring probabilities, and exposure is not a probability of job loss. Use your own judgment and verify requirements before making decisions.</p>',
-        '<h2>Your starting point</h2>',table([profile],[('current_soc','Current SOC'),('annual_income','Current annual income (USD)'),('desired_income','Desired annual income (USD)'),('weekly_hours','Learning hours/week')]),
+        '<h2>Your starting point</h2>',table([profile],[('current_soc','Current SOC'),('annual_income','Current annual income (USD)'),('desired_income',goal_label),('weekly_hours','Learning hours/week')]),
         '<h3>Career history and interests</h3><p class="preserve">'+value(profile['history'] or 'Not provided')+'</p>',
         '<h2>Target AI exposure</h2>',table(payload.get('target_exposure',[]),[('metric','Source metric'),('score','Original index'),('source_file','Source')]),
         '<p>Three separate source indices; compare occupations within the same metric. Negative indices are valid. Missing data is not zero. Classification versions are not fully reconciled.</p>',
         '<h2>Career comparisons</h2><p>Scoring basis: '+value(payload.get('comparison_basis'))+'. Skill weight: '+value(payload.get('recommendation_skill_weight'))+'. Scores below use 0–1 units.</p>',
-        table(payload.get('comparison_summary',[]),[('occupation','Occupation'),('comparison_score','Score (0–1)'),('assessment_coverage','Assessment coverage (0–1)'),('median_wage','Median annual wage (USD)')]),
+        table(payload.get('comparison_summary',[]),[('occupation','Occupation'),('comparison_score','Score (0–1)'),('assessment_coverage','Assessment coverage (0–1)'),('median_wage',wage_label),('education_pathway','Education pathway'),('qualification_review','Self-reported qualification review')]),
         '<h2>Education, experience and training</h2><p>Job Zone descriptions apply to the whole preparation group, including other occupations. They are not specific mandatory degrees, licensing checks or an assessment of your eligibility.</p>']
+    context=payload.get('recommendation_geography') or {}
+    if context:
+        sections.append('<h3>Selected labour market and wage basis</h3>'+table([context],[('scope','Scope'),('area_title','Area'),('basis','Wage basis'),('wage_year','Wage year'),('rpp_year','Price year')]))
+        if context.get('basis')=='Price-adjusted proxy':sections.append('<p>Comparison wages above are purchasing-power proxies, not nominal USD. Simulator income remains nominal USD.</p>')
+    review=payload.get('target_qualification_review')
+    if review:
+        sections.append('<h3>Personal qualification review (unverified)</h3><p>'+value(review.get('status'))+'</p><p class="preserve">'+value(review.get('notes') or 'No notes entered')+'</p>')
+    preferences=payload.get('education_preferences')
+    if preferences:
+        from core.pathways import categories
+        names=categories()
+        sections.append('<p>Current education: '+value(names.get(preferences.get('education_category'),'Not entered'))+'. Planned categories: '+value('; '.join(names.get(code,code) for code in (preferences.get('planned_education') or [])) or 'None')+'. Filter: '+value(preferences.get('education_filter') or 'All education pathways')+'.</p>')
     for row in payload.get('preparation_references',[]):
         sections.append('<h3>'+value(row['Title'])+' · '+value(row['O*NET-SOC Code'])+'</h3>')
         ref=row.get('reference')

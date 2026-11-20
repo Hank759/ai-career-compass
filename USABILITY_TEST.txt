@@ -5,7 +5,7 @@ Use a private browser window and the public app. Ask a classmate who did not bui
 Scenario: A fictional software developer wants to understand occupational AI exposure and compare a possible move into computer and information systems management. The fictional profile assumes USD 60,000 current income, USD 90,000 desired income and five weekly learning hours. These are invented examples, not market observations or a career recommendation.
 
 1. From Home, explore Chief Executives. Find all three exposure indices and explain why they are not job-loss percentages.
-2. Return Home. Expand Try a fictional example and download the workspace. Open Personal Profile, upload it and select Import profile. Confirm the learner is explicitly labelled fictional.
+2. Return Home. Select Start guided example. No file transfer is needed; a fresh session opens the example directly. Confirm the learner is explicitly labelled fictional.
 3. Open Career Recommendations. Locate the selected target 11-3021. Explain what affects the comparison score and what assessment coverage means.
 4. In Transition Simulator enter these assumptions: USD 90,000 post-transition income, six months, USD 1,200 fees, 100% earnings retained. Calculate and save. Expected arithmetic: USD 1,200 transition cost, USD 2,500 monthly income increase, 0.48 months simple payback after transition. These are arithmetic checks, not forecasts.
 5. Prepare a 12-week learning plan, check one task and download the report.

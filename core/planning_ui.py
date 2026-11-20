@@ -146,13 +146,13 @@ def recommendations(profile,m):
     display=top.copy()
     for col in ['comparison_score','skill_alignment','assessment_coverage','wage_preference']:
         display[col]=(display[col]*100).round(1)
-    st.dataframe(display,hide_index=True,column_config={
+    st.dataframe(display,hide_index=True,column_order=['occupation','comparison_score','assessment_coverage','median_wage','exposure_ai','exposure_language','exposure_image'],column_config={
         'code':'SOC code','occupation':'Occupation','comparison_score':st.column_config.NumberColumn('Comparison score / 100',format='%.1f'),
         'skill_alignment':st.column_config.NumberColumn('Assessed-skill alignment / 100',format='%.1f'),
         'assessment_coverage':st.column_config.NumberColumn('Skills assessed (%)',format='%.1f'),
         'wage_preference':st.column_config.NumberColumn('Wage preference / 100',format='%.1f'),
         'median_wage':st.column_config.NumberColumn('National median annual wage (USD)',format='$%.0f'),
-        'employment':'Published employment','exposure_ai':'General AI exposure index','exposure_language':'Language-model index','exposure_image':'Image-generation index'},
+        'employment':'Published employment','exposure_ai':'AI exposure','exposure_language':'Language exposure','exposure_image':'Image exposure'},
         alt='Career comparisons with heuristic scores, assessed-skill coverage and national wage benchmarks')
     st.caption('Exposure columns show raw source indices (general AI, language model and image generation), not percentages; blanks mean unavailable. Exposure is displayed for comparison, not used as a job-loss penalty in the ranking.')
     st.caption('Score and coverage columns are on a 0–100 scale, not probabilities. Low assessment coverage limits the comparison. Occupations without usable skill data are excluded; all wage records remain available in Career Dashboard.')

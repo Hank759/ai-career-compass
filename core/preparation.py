@@ -32,6 +32,7 @@ def panel(soc,onet_code=None):
                 st.info('The source Job Zone has no matching reference description.')
             else:
                 st.write(ref['Name'])
+                st.caption('The descriptions below apply to the whole Job Zone. Examples may describe other occupations in this zone; they are not specific degree or training requirements for the selected occupation.')
                 for field in ['Education','Experience','Job Training']:
                     st.markdown('**'+field+'**')
                     st.write(ref[field])

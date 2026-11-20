@@ -1,0 +1,20 @@
+{
+  "tests_passed": 56,
+  "runtime_pages_ready": [
+    "Home",
+    "Personal Profile",
+    "Career Dashboard",
+    "Regional Analysis",
+    "Industry Analysis",
+    "Historical Trends",
+    "Career Recommendations",
+    "Transition Simulator",
+    "Career Development Plan",
+    "Personal Report",
+    "Data & Methodology"
+  ],
+  "database_restoration": "sha256 verified",
+  "cloud_build": "not yet run; account authorization required",
+  "docker_build": "not run; Docker unavailable",
+  "public_url": null
+}

@@ -1,0 +1,117 @@
+"""Streamlit views backed by explicit source policies."""
+import sqlite3
+import pandas as pd
+import streamlit as st
+from core import data_access as data
+
+@st.cache_data(ttl=300,max_entries=64)
+def load(kind,version,*args):
+    return getattr(data,kind)(*args)
+
+def choose(label,df,key):
+    titles=df.set_index('code')['title'].to_dict()
+    return st.selectbox(label,list(df.code),format_func=lambda c: f'{c} — {titles[c]}',key=key)
+
+def render(page):
+    st.title(page)
+    try:
+        version=data.fingerprint()
+        if page=='Data & Methodology':
+            methodology(version)
+            return
+        occupations=load('catalog',version)
+        soc=choose('Occupation (BLS published classification)',occupations,'career_soc')
+        exposure_panel(soc,version,page)
+        if page=='Career Dashboard':
+            dashboard(soc,version)
+        elif page=='Regional Analysis':
+            scope=st.selectbox('Geography',['State','Metro'],key='region_scope')
+            df=load('observations',version,scope,soc)
+            show_observations(df)
+            st.caption('May 2025 · Cross-industry · Ownership 1235. Areas are separate comparisons; no combined employment total is calculated.')
+        elif page=='Industry Analysis':
+            scope=st.selectbox('Industry data',['National industry','State industry (research)'],key='industry_scope')
+            area=None
+            if scope.startswith('State'):
+                area=choose('State',load('options',version,scope,'area'),'industry_area')
+                st.warning('Research estimates are shown separately from standard estimates. Only the allsectors source is used.')
+            show_observations(load('observations',version,scope,soc,area))
+            st.caption('May 2025 · Sector level only. Ownership coverage follows the selected source; do not combine with ownership-specific files or other industry levels.')
+    except (FileNotFoundError,sqlite3.Error,ValueError,KeyError) as exc:
+        st.error(f'Data could not be loaded: {exc}')
+
+def show_observations(df):
+    if df.empty:
+        st.info('No published record is available for this selection.')
+        return
+    if len(df)>1:
+        label='industry_title' if df.industry_title.nunique()>1 else 'area_title'
+        chart=df[[label,'a_median']].dropna(subset=['a_median']).sort_values('a_median',ascending=False).head(10)
+        if not chart.empty:
+            st.subheader('Published median annual wages · Top 10 in this selection')
+            st.caption('Nominal USD, without cost-of-living adjustment. Only published records for the selected occupation are compared.')
+            st.bar_chart(chart,x=label,y='a_median',horizontal=True,x_label='Median annual wage (USD)',y_label='Industry' if label=='industry_title' else 'Area',alt='Ten highest published median annual wages in the current occupation and geography or industry selection')
+    cols=['area_title','industry_title','tot_emp','a_mean','a_median','h_mean','research','source_file','source_row']
+    display=df[cols].rename(columns={'tot_emp':'Employment','a_mean':'Mean annual wage (USD)',
+        'a_median':'Median annual wage (USD)','h_mean':'Mean hourly wage (USD)',
+        'area_title':'Area','industry_title':'Industry','research':'Research estimate',
+        'source_file':'Source','source_row':'Source row'})
+    st.dataframe(display,hide_index=True,alt='Published employment and wages for the selected occupation')
+    st.caption('Blank wage/employment cells mean unavailable or suppressed. They are never replaced with zero. Annual wages are nominal USD, without cost-of-living adjustment.')
+
+def dashboard(soc,version):
+    df=load('observations',version,'National',soc)
+    show_observations(df)
+    profiles=load('onet_profiles',version,soc)
+    if profiles.empty:
+        st.info('This BLS occupation has no direct O*NET base-code match. Its published wages remain available; no skills or exposure values are inferred from component occupations.')
+    else:
+        st.subheader('O*NET occupation profiles')
+        st.caption('The seven-character SOC base code links to one or more O*NET specializations. BLS wages above refer to the parent occupation, not an individual specialization.')
+        code=choose('Profile',profiles,'onet_profile')
+        st.write(profiles.set_index('code').loc[code,'description'])
+        skill=load('skills',version,code)
+        st.subheader('Skill importance')
+        st.caption('Importance (IM) only; suppressed/not-relevant rows excluded. Essential and transferable skills retain their original families and dates.')
+        st.dataframe(skill.head(20),hide_index=True,alt='Top available O*NET skill importance ratings for the selected specialization')
+
+
+def exposure_panel(soc,version,context='Career Dashboard'):
+    st.subheader('AI exposure')
+    scores=load('exposure',version,soc)
+    labels=[('AIOE','General AI exposure (AIOE)'),
+            ('Language Modeling AIOE','Language-model exposure'),
+            ('Image Generation AIOE','Image-generation exposure')]
+    if scores.metric.duplicated().any():
+        raise ValueError('Multiple exposure observations for one metric; review the source before display.')
+    values=scores.set_index('metric')['score'].to_dict()
+    with st.container(horizontal=True):
+        for metric,label in labels:
+            value=values.get(metric)
+            st.metric(label,f'{float(value):.3f}' if pd.notna(value) else 'Not available',
+                      border=True,help='Original source index. Negative values are valid. This is not a percentage or a probability of job loss.')
+    st.caption('Source: Felten exposure datasets. These are three distinct indices, not a combined risk score or job-loss probability. Exact SOC-code matching only; source and current classification versions are not fully reconciled.')
+    if scores.empty:
+        st.info(f'No exact-code exposure estimate is available for SOC {soc}. Missing data is not zero exposure, and no value is inferred from a similar job title.')
+    if context in ('Regional Analysis','Industry Analysis'):
+        st.caption('Occupation-level reference only: these values do not change by region or industry. They are not regional AIGE or industry AIIE estimates.')
+    with st.expander('Exposure source details'):
+        st.dataframe(scores,hide_index=True,alt='Original AI exposure indices and source files for the selected SOC occupation')
+
+def methodology(version):
+    st.subheader('Source selection')
+    policy=pd.DataFrame([{'View':k,'Source':v[1]} for k,v in data.TABLES.items()])
+    st.dataframe(policy,hide_index=True,alt='Source file selected for each application view')
+    st.write('State-industry allsectors duplicates the twelve partition files: the full-row hash multiplicities match for all 867,905 rows. This application uses allsectors only and exposes sectors only, avoiding overlap between industry levels.')
+    st.write('National, state and metro wages use standard cross-industry files with ownership code 1235. Industry views use the coverage published in the selected sector source; research estimates remain labeled. Raw records are retained unchanged.')
+    st.subheader('Occupation mapping audit')
+    audit=load('mapping_audit',version)
+    review=audit[audit.status!='base_code_match']
+    st.dataframe(review,hide_index=True,alt='Occupations requiring mapping review and candidate component codes')
+    st.download_button('Download complete mapping audit',audit.to_csv(index=False).encode('utf-8-sig'),
+                       'occupation_mapping_audit.csv','text/csv',key='download_mapping')
+    st.markdown('[BLS classification and combined-occupation explanations](https://www.bls.gov/oes/oes_ques.htm)')
+    st.caption('Candidate components come from the BLS FAQ historical classification table; they are not a verified 2025-to-current-O*NET crosswalk. They are shown for review only. No combined score, component employment split, or automatic skill average is calculated.')
+    st.write('Personal Profile, annual historical estimates, heuristic career comparisons, learning plans and assumption-based transition scenarios are now available. Profiles persist only in session unless exported. BEA purchasing-power adjustment remains unimplemented; scenario costs are not individual job-loss predictions.')
+
+UI_COPY_REVISION = 'english-20261120'

@@ -1,0 +1,68 @@
+{
+  "scope": "application",
+  "database_sha256": "654e05106f759624b9720b5ef79542858aed1a215abfbeaf9557266c260472f2",
+  "database_bytes": 97538048,
+  "compressed_bytes": 23492666,
+  "parts": [
+    "database.part000",
+    "database.part001"
+  ],
+  "selection": [
+    {
+      "table": "raw_national_m2022_dl",
+      "original_file": "data/raw/bls/national_M2022_dl.xlsx",
+      "original_rows": 1402,
+      "deployed_rows": 830,
+      "selector": " WHERE O_GROUP='detailed'"
+    },
+    {
+      "table": "raw_national_m2023_dl",
+      "original_file": "data/raw/bls/national_M2023_dl.xlsx",
+      "original_rows": 1403,
+      "deployed_rows": 831,
+      "selector": " WHERE O_GROUP='detailed'"
+    },
+    {
+      "table": "raw_national_m2024_dl",
+      "original_file": "data/raw/bls/national_M2024_dl.xlsx",
+      "original_rows": 1403,
+      "deployed_rows": 831,
+      "selector": " WHERE O_GROUP='detailed'"
+    },
+    {
+      "table": "raw_national_m2025_dl",
+      "original_file": "data/raw/bls/national_M2025_dl.xlsx",
+      "original_rows": 1401,
+      "deployed_rows": 830,
+      "selector": " WHERE O_GROUP='detailed'"
+    },
+    {
+      "table": "raw_state_m2025_dl",
+      "original_file": "data/raw/bls/state_M2025_dl.xlsx",
+      "original_rows": 37408,
+      "deployed_rows": 36168,
+      "selector": " WHERE O_GROUP='detailed'"
+    },
+    {
+      "table": "raw_msa_m2025_dl",
+      "original_file": "data/raw/bls/MSA_M2025_dl.xlsx",
+      "original_rows": 150023,
+      "deployed_rows": 141015,
+      "selector": " WHERE O_GROUP='detailed'"
+    },
+    {
+      "table": "raw_natsector_m2025_dl",
+      "original_file": "data/raw/bls/natsector_M2025_dl.xlsx",
+      "original_rows": 16386,
+      "deployed_rows": 8527,
+      "selector": " WHERE O_GROUP='detailed' AND I_GROUP='sector'"
+    },
+    {
+      "table": "raw_oes_research_2025_allsectors",
+      "original_file": "data/raw/bls/state_industry/oes_research_2025_allsectors.xlsx",
+      "original_rows": 867905,
+      "deployed_rows": 132786,
+      "selector": " WHERE O_GROUP='detailed' AND I_GROUP='sector'"
+    }
+  ]
+}

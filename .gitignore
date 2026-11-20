@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.sqlite
+*.sqlite-*
+*.tmp
+.streamlit/secrets.toml
+career_profile.json
+career_workspace.json
+career_report.*

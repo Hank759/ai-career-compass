@@ -7,6 +7,7 @@ from core import data_access as d
 PAGES=['Home','Personal Profile','Career Dashboard','Regional Analysis','Industry Analysis','Historical Trends',
        'Career Recommendations','Transition Simulator','Career Development Plan','Personal Report','Data & Methodology']
 HELP={
+ 'Personal Report':('Step 5 · Review and save','Review your target and saved scenario. Download a printable HTML report, JSON or Markdown. Back up the complete workspace to restore your progress later.'),
  'Personal Profile':('Step 1 · Understand your starting point','Enter your occupation, annual income in USD and weekly learning hours. Double-click a rating cell, assess at least three skills and select Save profile. Blank means unassessed; 0 means unfamiliar.'),
  'Career Dashboard':('Explore · Start with AI exposure','Choose an occupation, review its three AI exposure indices, then explore wages and skills. Not available means no matching estimate. Exposure is not a job-loss probability. No profile is required.'),
  'Regional Analysis':('Explore · Compare locations','Choose an occupation and State or Metro geography to compare published nominal wages. The exposure cards are occupation-level references and do not vary by location.'),
@@ -15,7 +16,6 @@ HELP={
  'Career Recommendations':('Step 2 · Compare possible directions','Review scores and skill-assessment coverage, then choose a target to examine exposure and learning priorities. Adjust the weights if needed. Scores are comparison rules, not hiring probabilities.'),
  'Transition Simulator':('Step 3 · Test your transition assumptions','Enter assumed income, duration and fees. Select Calculate and save scenario to review costs, income changes and payback. Results depend on your assumptions.'),
  'Career Development Plan':('Step 4 · Turn your direction into action','Set a planning horizon, practise within your weekly time budget, save work or feedback as evidence and check off progress. Allocated hours are not estimates of time to mastery.'),
- 'Personal Report':('Step 5 · Review and save','Review your target and saved scenario, then download a JSON or Markdown report. Return to Personal Profile to back up the complete workspace.'),
  'Data & Methodology':('Understand the results · Data and methodology','Review source selection, duplicate handling, occupation mappings and analytical limitations. No personal profile is required.')}
 
 
@@ -54,7 +54,7 @@ def journey_state(state):
     ready=len(profile.get('ratings',{}))>=3
     target=state.get('planning_target')
     scenario=state.get('saved_scenario') or {}
-    plan=bool(target and target in state.get('plan_horizons',{}))
+    plan=bool(target and target in state.get('plan_horizons',{}) and state.get('plan_unavailable_target')!=target)
     report=bool(target and state.get('report_prepared_target')==target)
     flags=[ready,bool(ready and target),bool(ready and target and scenario.get('target')==target),bool(ready and plan),bool(ready and report)]
     if not ready:next_page='Personal Profile'
@@ -176,5 +176,11 @@ def footer(page):
         with st.container(horizontal=True):
             st.button(labels[target],type='primary',on_click=go,args=(target,),key='footer_next')
             if target!='Home':st.button('Back to Home',on_click=go,args=('Home',),key='footer_home')
+        if st.session_state.get('profile'):
+            import json
+            from core.workspace import export_workspace
+            st.download_button('Quick backup: complete workspace',json.dumps(export_workspace(st.session_state),indent=2,allow_nan=False).encode('utf-8'),
+                'career_workspace.json','application/json',key='footer_workspace_backup',icon=':material/save:')
+            st.caption('Restore this JSON file in Personal Profile. A report alone does not restore your saved workspace.')
 
 UI_COPY_REVISION = 'english-20261120'

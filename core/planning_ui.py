@@ -20,6 +20,9 @@ def annual(soc,version):
 def save_profile(profile):
     p.validate_profile(profile)
     if profile!=st.session_state.get('profile'):
+        for key in list(st.session_state):
+            if key.startswith(('target_income_','scenario_months_','scenario_cost_','retained_income_','check_','plan_weeks_')):
+                del st.session_state[key]
         st.session_state['scenario_comparisons']=[]
         st.session_state.pop('saved_scenario',None)
         st.session_state.pop('report_prepared_target',None)
@@ -54,11 +57,18 @@ def render(page):
     except (ValueError,KeyError,sqlite3.Error,OSError) as exc:
         st.error(f'Unable to complete this step: {exc}')
 
+def select_target(key):
+    st.session_state['planning_target']=st.session_state[key]
+
+
 def target_selector(cat,key):
     codes=list(cat.code);titles=cat.set_index('code').occupation.to_dict()
     previous=st.session_state.get('planning_target')
     index=codes.index(previous) if previous in codes else 0
-    target=st.selectbox('Target occupation',codes,index=index,format_func=lambda x:f'{x} — {titles[x]}',key=key)
+    expected=previous if previous in codes else codes[index]
+    if st.session_state.get(key)!=expected:
+        st.session_state[key]=expected
+    target=st.selectbox('Target occupation',codes,format_func=lambda x:f'{x} — {titles[x]}',key=key,on_change=select_target,args=(key,))
     st.session_state.planning_target=target
     return target
 
@@ -272,13 +282,17 @@ def development(profile,target,m):
     st.caption('A suggested practice schedule, not an estimate of the time needed to qualify. Self-assess unassessed skills before relying on the priority order.')
     horizons=st.session_state.setdefault('plan_horizons',{})
     weeks=st.number_input('Planning horizon (weeks)',min_value=1,max_value=104,value=int(horizons.get(target,12)),key='plan_weeks_'+target)
-    horizons[target]=int(weeks)
     focus=g[g.self_rating.notna() & (g.priority>0)].head(5)
     unknown=g[g.self_rating.isna()]
     if len(unknown):
         st.info(f'{len(unknown)} reference skills remain unassessed. The schedule below uses assessed skills only.')
     if focus.empty:
+        horizons.pop(target,None)
+        st.session_state['plan_unavailable_target']=target
         st.info('There are no assessed skills with a positive learning priority. Assess blank skills in Personal Profile, or revisit ratings if appropriate.');return
+    horizons[target]=int(weeks)
+    if st.session_state.get('plan_unavailable_target')==target:
+        st.session_state.pop('plan_unavailable_target',None)
     saved=st.session_state.setdefault('plan_done',{})
     rows=learning.build_plan(g,target,weeks,profile['weekly_hours'],saved)
     st.caption('Exercises below are app-authored practice suggestions, not official O*NET training requirements or course endorsements. Equipment-related practice should use simulation or appropriate supervision.')
@@ -319,6 +333,14 @@ def personal_report(profile,target,m):
     st.dataframe(pd.DataFrame(payload['skill_priorities']),hide_index=True,alt='Personal report skill-priority summary')
     if saved is None:
         st.info('No saved scenario for this target. The report will explicitly record scenario as unavailable.')
+    else:
+        st.subheader('Your saved scenario at a glance')
+        summary=saved['result']
+        st.write(f'Transition: {summary["training_months"]:g} months · Assumed annual income after transition: ${saved["target_income"]:,.0f} · Total transition cost: ${summary["total_transition_cost"]:,.0f}.')
+    from core.report_html import render as printable_report
+    st.download_button('Download printable report (HTML)',printable_report(payload).encode('utf-8'),
+                       'career_report.html','text/html',key='download_report_html')
+    st.caption('Open the HTML file in your browser, then choose Print or Save as PDF. It includes your inputs, comparison basis, exposure, saved scenario and learning activities. It works offline.')
     st.download_button('Download complete report (JSON)',json.dumps(payload,ensure_ascii=False,indent=2,allow_nan=False).encode('utf-8'),
                        'career_report.json','application/json',key='download_report_json')
     lines=['# Personal career planning report','',f'Target: {target} — {payload["target"]["title"]}',

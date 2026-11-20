@@ -22,7 +22,7 @@ Use Python 3.12. Install requirements-dev.txt, then run:
     python -m pytest tests -q
     streamlit run app.py
 
-56 tests passed in the preparation environment. All 11 pages returned ready in an isolated runtime. Cloud/Linux builds are not yet verified. This package is deployment-ready preparation, not proof of a published website.
+The application is deployed on Streamlit Community Cloud and has been checked in an independent anonymous browser. The current workflow suite contains 75 passing tests. All 11 pages also returned ready through an isolated running server, including the fictional example, saved scenario and report workflow. Docker builds remain untested locally.
 
 A Dockerfile is included for compatible container hosts. It listens on port 7860. Docker itself was not available for a local container-build test. Hugging Face is optional; confirm its current account/plan requirements before choosing it.
 
@@ -44,3 +44,15 @@ Home now offers Start guided example without file transfer. Replacing an existin
 ## Skill table
 
 Career Dashboard now shows Skill, Importance (1–5) and Skill category. Categories preserve the source table grouping; they do not create separate ranking weights. Category filtering, show-all and CSV download are available. Source identifiers, dates and rating origins remain in Skill source details.
+
+## Reports and progress
+
+Personal Report includes a self-contained printable HTML download alongside JSON
+and Markdown. Open HTML in a browser to print or save as PDF; no external assets
+or script are required. User inputs are HTML-escaped. Personal reports contain
+private inputs and remain excluded from version control.
+
+Planning pages include a quick complete-workspace backup. A printable report is
+not a workspace restore file. Target selection follows the user across planning
+pages. A changed profile clears obsolete scenario form inputs. A plan with no
+usable learning tasks is not counted as a prepared learning plan.

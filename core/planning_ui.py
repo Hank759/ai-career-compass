@@ -7,6 +7,7 @@ from core import data_access as d
 from core import planning as p
 from core import workspace as ws
 from core import learning_tasks as learning
+from core import preparation
 
 @st.cache_data(ttl=300,max_entries=16)
 def reference(kind,version):
@@ -133,14 +134,19 @@ def history_page(version):
 def recommendations(profile,m):
     st.caption('A transparent comparison tool, not a prediction of suitability, job availability or hiring success. Your history/interests text is not scored.')
     weight=st.slider('Weight on assessed-skill alignment',0.0,1.0,float(st.session_state.get('recommendation_weight',.8)),0.05,key='skill_weight')
-    st.caption('The remaining weight goes to national median wage / desired wage, capped at 1. Missing wage or a zero wage goal uses skill alignment alone. Unassessed skills are excluded rather than treated as zero.')
+    st.caption('The remaining weight goes to national median wage / desired wage, capped at 1. A zero wage goal or 100% skill weight uses skills only. When wage contributes to the score, occupations without a wage estimate are shown separately. Unassessed skills are excluded rather than treated as zero.')
     if len(profile['ratings'])<3:
         st.info('Return to Personal Profile and assess at least three skills to generate comparisons.');return
     st.session_state['recommendation_weight']=weight
     if len(set(profile['ratings'].values()))==1:
         st.warning('All assessed skills have the same rating, so they provide little differentiation between occupations. Add varied assessments where justified; tied scores are ordered by SOC code, not evidence of better suitability.')
-    result=p.recommend(profile,m,weight)
-    if float(result.assessment_coverage.max())<0.25:
+    result,supplementary,basis=p.comparison_groups(profile,m,weight)
+    st.info(f'Current comparison basis: {basis}. {len(result)} occupations use this same scoring basis.')
+    if not supplementary.empty:
+        with st.expander(f'{len(supplementary)} additional occupations without wage estimates'):
+            st.caption('These occupations are excluded from the combined ranking. Their assessed-skill alignment remains available below; move the skill weight to 1.0 to compare all occupations using skills alone.')
+            st.dataframe(supplementary[['code','occupation','skill_alignment','assessment_coverage']].rename(columns={'skill_alignment':'Skill alignment (0–1)','assessment_coverage':'Assessment coverage (0–1)'}),hide_index=True,alt='Supplementary skill-only evidence for occupations without published wages')
+    if not result.empty and float(result.assessment_coverage.max())<0.25:
         st.warning('Fewer than a quarter of reference skills are assessed. More assessments will make the comparison better informed.')
     top=result.head(25)
     display=top.copy()
@@ -165,19 +171,21 @@ def recommendations(profile,m):
         selections=pd.concat([top,prior[prior.code==previous]],ignore_index=True)
         st.caption('Your previously selected target remains selectable even if it is outside the current shortlist.')
     target=target_selector(selections,'recommendation_target')
-    matched=result[result.code==target]
+    evidence=pd.concat([result,supplementary],ignore_index=True)
+    matched=evidence[evidence.code==target]
     if not matched.empty:
         row=matched.iloc[0]
         with st.container(border=True):
             st.subheader('Why this comparison?')
             st.write(f'Assessed-skill alignment: {row.skill_alignment*100:.1f}/100. Skill assessment coverage: {row.assessment_coverage*100:.1f}%.')
-            if pd.notna(row.wage_preference):
+            if basis=='Skills + wage' and pd.notna(row.wage_preference):
                 st.write(f'Comparison score {row.comparison_score*100:.1f}/100 = {weight:.0%} skill alignment + {1-weight:.0%} wage preference. The wage term is capped at the stated goal.')
             else:
-                st.write('Only the assessed-skill term is available: no wage goal was set or the wage estimate is missing. This row uses a different evidence basis from rows with both terms.')
+                st.write('This comparison uses assessed-skill alignment alone. It is included in the ranked list only when the selected basis is skills only.')
             st.caption('These are rule-based comparisons. A high score does not establish qualifications, licensing eligibility or hiring prospects.')
     from core.data_ui import exposure_panel
     exposure_panel(target,d.fingerprint(),'Career Recommendations')
+    preparation.panel(target)
     gap=p.gaps(profile,target,m)
     important=gap.dropna(subset=['self_rating']).head(8)
     if not important.empty:
@@ -299,7 +307,13 @@ def personal_report(profile,target,m):
     payload['learning_plan']=learning.build_plan(p.gaps(profile,target,m),target,st.session_state.get('plan_horizons',{}).get(target,12),profile['weekly_hours'],done)
     weight=st.session_state.get('recommendation_weight',0.8)
     payload['recommendation_skill_weight']=weight
-    payload['comparison_summary']=json.loads(p.recommend(profile,m,weight).head(10).to_json(orient='records')) if len(profile['ratings'])>=3 else []
+    payload['comparison_basis']='Unavailable: assess at least three skills'
+    payload['comparison_summary']=[]
+    if len(profile['ratings'])>=3:
+        ranked,_,basis=p.comparison_groups(profile,m,weight)
+        payload['comparison_basis']=basis
+        payload['comparison_summary']=json.loads(ranked.head(10).to_json(orient='records'))
+    preparation.panel(target)
     st.subheader(payload['target']['title'])
     st.write(f'Profile: {profile["name"] or "Unnamed"} · Assessed skills: {len(profile["ratings"])}')
     st.dataframe(pd.DataFrame(payload['skill_priorities']),hide_index=True,alt='Personal report skill-priority summary')
@@ -314,7 +328,7 @@ def personal_report(profile,target,m):
            f'Learning hours per week: {profile["weekly_hours"]}','', '## Career history and interests',profile['history'],'','## Skill priorities']
     for r in payload['skill_priorities']:
         lines.append(f'- {r["skill"]}: importance {r["importance"]:.2f}; self-rating {r["self_rating"]}; priority {r["priority"]}')
-    lines+=['','## Target AI exposure (raw source indices)',json.dumps(payload['target_exposure'],ensure_ascii=False,indent=2),'','## Career comparison summary',json.dumps(payload['comparison_summary'],ensure_ascii=False,indent=2),f'Skill weight: {weight}','','## Scenario',json.dumps(saved,ensure_ascii=False,indent=2),'','## Saved comparison scenarios for this target',json.dumps(payload['scenario_comparisons'],ensure_ascii=False,indent=2),'','## Learning plan and completion evidence',json.dumps(payload['learning_plan'],ensure_ascii=False,indent=2),'','## Completed learning tasks',json.dumps(payload['completed_tasks'],indent=2),'','## Methods and limitations']
+    lines+=['','## Education, experience and training references',json.dumps(payload['preparation_references'],ensure_ascii=False,indent=2),'','## Comparison basis',payload['comparison_basis'],'','## Target AI exposure (raw source indices)',json.dumps(payload['target_exposure'],ensure_ascii=False,indent=2),'','## Career comparison summary',json.dumps(payload['comparison_summary'],ensure_ascii=False,indent=2),f'Skill weight: {weight}','','## Scenario',json.dumps(saved,ensure_ascii=False,indent=2),'','## Saved comparison scenarios for this target',json.dumps(payload['scenario_comparisons'],ensure_ascii=False,indent=2),'','## Learning plan and completion evidence',json.dumps(payload['learning_plan'],ensure_ascii=False,indent=2),'','## Completed learning tasks',json.dumps(payload['completed_tasks'],indent=2),'','## Methods and limitations']
     lines += [f'- {k}: {v}' for k,v in payload['methodology'].items()]
     st.download_button('Download readable report (Markdown)','\n'.join(lines).encode('utf-8'),'career_report.md','text/markdown',key='download_report_md')
     st.session_state['report_prepared_target']=target

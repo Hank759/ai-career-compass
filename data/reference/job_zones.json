@@ -1,0 +1,6508 @@
+{
+  "version": 1,
+  "sources": [
+    "data/raw/onet/Job Zones.xlsx",
+    "data/raw/onet/Job Zone Reference.xlsx"
+  ],
+  "profiles": [
+    {
+      "O*NET-SOC Code": "11-1011.00",
+      "Title": "Chief Executives",
+      "Job Zone": "5",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-1011.03",
+      "Title": "Chief Sustainability Officers",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-1021.00",
+      "Title": "General and Operations Managers",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-1031.00",
+      "Title": "Legislators",
+      "Job Zone": "4",
+      "Date": "06/2008",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-2011.00",
+      "Title": "Advertising and Promotions Managers",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-2021.00",
+      "Title": "Marketing Managers",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-2022.00",
+      "Title": "Sales Managers",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-2032.00",
+      "Title": "Public Relations Managers",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-2033.00",
+      "Title": "Fundraising Managers",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3012.00",
+      "Title": "Administrative Services Managers",
+      "Job Zone": "3",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3013.00",
+      "Title": "Facilities Managers",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3013.01",
+      "Title": "Security Managers",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3021.00",
+      "Title": "Computer and Information Systems Managers",
+      "Job Zone": "4",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3031.00",
+      "Title": "Financial Managers",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3031.01",
+      "Title": "Treasurers and Controllers",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3031.03",
+      "Title": "Investment Fund Managers",
+      "Job Zone": "5",
+      "Date": "07/2014",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3051.00",
+      "Title": "Industrial Production Managers",
+      "Job Zone": "4",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3051.01",
+      "Title": "Quality Control Systems Managers",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3051.02",
+      "Title": "Geothermal Production Managers",
+      "Job Zone": "3",
+      "Date": "07/2011",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3051.03",
+      "Title": "Biofuels Production Managers",
+      "Job Zone": "4",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3051.04",
+      "Title": "Biomass Power Plant Managers",
+      "Job Zone": "4",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3051.06",
+      "Title": "Hydroelectric Production Managers",
+      "Job Zone": "3",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3061.00",
+      "Title": "Purchasing Managers",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3071.00",
+      "Title": "Transportation, Storage, and Distribution Managers",
+      "Job Zone": "4",
+      "Date": "11/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3071.04",
+      "Title": "Supply Chain Managers",
+      "Job Zone": "4",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3111.00",
+      "Title": "Compensation and Benefits Managers",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3121.00",
+      "Title": "Human Resources Managers",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-3131.00",
+      "Title": "Training and Development Managers",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9013.00",
+      "Title": "Farmers, Ranchers, and Other Agricultural Managers",
+      "Job Zone": "4",
+      "Date": "11/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9021.00",
+      "Title": "Construction Managers",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9031.00",
+      "Title": "Education and Childcare Administrators, Preschool and Daycare",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9032.00",
+      "Title": "Education Administrators, Kindergarten through Secondary",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9033.00",
+      "Title": "Education Administrators, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9041.00",
+      "Title": "Architectural and Engineering Managers",
+      "Job Zone": "5",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9041.01",
+      "Title": "Biofuels/Biodiesel Technology and Product Development Managers",
+      "Job Zone": "4",
+      "Date": "07/2014",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9051.00",
+      "Title": "Food Service Managers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9071.00",
+      "Title": "Gambling Managers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9072.00",
+      "Title": "Entertainment and Recreation Managers, Except Gambling",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9081.00",
+      "Title": "Lodging Managers",
+      "Job Zone": "4",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9111.00",
+      "Title": "Medical and Health Services Managers",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9121.00",
+      "Title": "Natural Sciences Managers",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9121.01",
+      "Title": "Clinical Research Coordinators",
+      "Job Zone": "4",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9121.02",
+      "Title": "Water Resource Specialists",
+      "Job Zone": "4",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9131.00",
+      "Title": "Postmasters and Mail Superintendents",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9141.00",
+      "Title": "Property, Real Estate, and Community Association Managers",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9151.00",
+      "Title": "Social and Community Service Managers",
+      "Job Zone": "4",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9161.00",
+      "Title": "Emergency Management Directors",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9171.00",
+      "Title": "Funeral Home Managers",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9179.01",
+      "Title": "Fitness and Wellness Coordinators",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9179.02",
+      "Title": "Spa Managers",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9199.01",
+      "Title": "Regulatory Affairs Managers",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9199.02",
+      "Title": "Compliance Managers",
+      "Job Zone": "4",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9199.08",
+      "Title": "Loss Prevention Managers",
+      "Job Zone": "4",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9199.09",
+      "Title": "Wind Energy Operations Managers",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9199.10",
+      "Title": "Wind Energy Development Managers",
+      "Job Zone": "4",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "11-9199.11",
+      "Title": "Brownfield Redevelopment Specialists and Site Managers",
+      "Job Zone": "4",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1011.00",
+      "Title": "Agents and Business Managers of Artists, Performers, and Athletes",
+      "Job Zone": "4",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1021.00",
+      "Title": "Buyers and Purchasing Agents, Farm Products",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1022.00",
+      "Title": "Wholesale and Retail Buyers, Except Farm Products",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1023.00",
+      "Title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1031.00",
+      "Title": "Claims Adjusters, Examiners, and Investigators",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1032.00",
+      "Title": "Insurance Appraisers, Auto Damage",
+      "Job Zone": "3",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1041.00",
+      "Title": "Compliance Officers",
+      "Job Zone": "4",
+      "Date": "11/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1041.01",
+      "Title": "Environmental Compliance Inspectors",
+      "Job Zone": "4",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1041.03",
+      "Title": "Equal Opportunity Representatives and Officers",
+      "Job Zone": "4",
+      "Date": "07/2015",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1041.04",
+      "Title": "Government Property Inspectors and Investigators",
+      "Job Zone": "3",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1041.06",
+      "Title": "Coroners",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1041.07",
+      "Title": "Regulatory Affairs Specialists",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1041.08",
+      "Title": "Customs Brokers",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1051.00",
+      "Title": "Cost Estimators",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1071.00",
+      "Title": "Human Resources Specialists",
+      "Job Zone": "4",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1074.00",
+      "Title": "Farm Labor Contractors",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1075.00",
+      "Title": "Labor Relations Specialists",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1081.00",
+      "Title": "Logisticians",
+      "Job Zone": "4",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1081.01",
+      "Title": "Logistics Engineers",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1081.02",
+      "Title": "Logistics Analysts",
+      "Job Zone": "4",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1082.00",
+      "Title": "Project Management Specialists",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1111.00",
+      "Title": "Management Analysts",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1121.00",
+      "Title": "Meeting, Convention, and Event Planners",
+      "Job Zone": "4",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1131.00",
+      "Title": "Fundraisers",
+      "Job Zone": "4",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1141.00",
+      "Title": "Compensation, Benefits, and Job Analysis Specialists",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1151.00",
+      "Title": "Training and Development Specialists",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1161.00",
+      "Title": "Market Research Analysts and Marketing Specialists",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1161.01",
+      "Title": "Search Marketing Strategists",
+      "Job Zone": "4",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1199.04",
+      "Title": "Business Continuity Planners",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1199.05",
+      "Title": "Sustainability Specialists",
+      "Job Zone": "4",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1199.06",
+      "Title": "Online Merchants",
+      "Job Zone": "4",
+      "Date": "07/2014",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-1199.07",
+      "Title": "Security Management Specialists",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-2011.00",
+      "Title": "Accountants and Auditors",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-2022.00",
+      "Title": "Appraisers of Personal and Business Property",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-2023.00",
+      "Title": "Appraisers and Assessors of Real Estate",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-2031.00",
+      "Title": "Budget Analysts",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-2041.00",
+      "Title": "Credit Analysts",
+      "Job Zone": "4",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-2051.00",
+      "Title": "Financial and Investment Analysts",
+      "Job Zone": "4",
+      "Date": "11/2021",
+      "Domain Source": "Analyst - Preliminary"
+    },
+    {
+      "O*NET-SOC Code": "13-2052.00",
+      "Title": "Personal Financial Advisors",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-2053.00",
+      "Title": "Insurance Underwriters",
+      "Job Zone": "4",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-2054.00",
+      "Title": "Financial Risk Specialists",
+      "Job Zone": "4",
+      "Date": "11/2021",
+      "Domain Source": "Analyst - Preliminary"
+    },
+    {
+      "O*NET-SOC Code": "13-2061.00",
+      "Title": "Financial Examiners",
+      "Job Zone": "4",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-2071.00",
+      "Title": "Credit Counselors",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-2072.00",
+      "Title": "Loan Officers",
+      "Job Zone": "4",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-2081.00",
+      "Title": "Tax Examiners and Collectors, and Revenue Agents",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-2082.00",
+      "Title": "Tax Preparers",
+      "Job Zone": "3",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-2099.01",
+      "Title": "Financial Quantitative Analysts",
+      "Job Zone": "5",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "13-2099.04",
+      "Title": "Fraud Examiners, Investigators and Analysts",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1211.00",
+      "Title": "Computer Systems Analysts",
+      "Job Zone": "4",
+      "Date": "05/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1211.01",
+      "Title": "Health Informatics Specialists",
+      "Job Zone": "5",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1212.00",
+      "Title": "Information Security Analysts",
+      "Job Zone": "4",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1221.00",
+      "Title": "Computer and Information Research Scientists",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1231.00",
+      "Title": "Computer Network Support Specialists",
+      "Job Zone": "4",
+      "Date": "07/2014",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1232.00",
+      "Title": "Computer User Support Specialists",
+      "Job Zone": "3",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1241.00",
+      "Title": "Computer Network Architects",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1241.01",
+      "Title": "Telecommunications Engineering Specialists",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1242.00",
+      "Title": "Database Administrators",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1243.00",
+      "Title": "Database Architects",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1243.01",
+      "Title": "Data Warehousing Specialists",
+      "Job Zone": "4",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1244.00",
+      "Title": "Network and Computer Systems Administrators",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1251.00",
+      "Title": "Computer Programmers",
+      "Job Zone": "4",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1252.00",
+      "Title": "Software Developers",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1253.00",
+      "Title": "Software Quality Assurance Analysts and Testers",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1254.00",
+      "Title": "Web Developers",
+      "Job Zone": "3",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1255.00",
+      "Title": "Web and Digital Interface Designers",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1255.01",
+      "Title": "Video Game Designers",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1299.01",
+      "Title": "Web Administrators",
+      "Job Zone": "4",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1299.02",
+      "Title": "Geographic Information Systems Technologists and Technicians",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1299.03",
+      "Title": "Document Management Specialists",
+      "Job Zone": "4",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1299.04",
+      "Title": "Penetration Testers",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1299.05",
+      "Title": "Information Security Engineers",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1299.06",
+      "Title": "Digital Forensics Analysts",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1299.07",
+      "Title": "Blockchain Engineers",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1299.08",
+      "Title": "Computer Systems Engineers/Architects",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-1299.09",
+      "Title": "Information Technology Project Managers",
+      "Job Zone": "4",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-2011.00",
+      "Title": "Actuaries",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-2021.00",
+      "Title": "Mathematicians",
+      "Job Zone": "5",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-2031.00",
+      "Title": "Operations Research Analysts",
+      "Job Zone": "5",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-2041.00",
+      "Title": "Statisticians",
+      "Job Zone": "5",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-2041.01",
+      "Title": "Biostatisticians",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-2051.00",
+      "Title": "Data Scientists",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-2051.01",
+      "Title": "Business Intelligence Analysts",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-2051.02",
+      "Title": "Clinical Data Managers",
+      "Job Zone": "4",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "15-2099.01",
+      "Title": "Bioinformatics Technicians",
+      "Job Zone": "4",
+      "Date": "07/2014",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-1011.00",
+      "Title": "Architects, Except Landscape and Naval",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-1012.00",
+      "Title": "Landscape Architects",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-1021.00",
+      "Title": "Cartographers and Photogrammetrists",
+      "Job Zone": "4",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-1022.00",
+      "Title": "Surveyors",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-1022.01",
+      "Title": "Geodetic Surveyors",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2011.00",
+      "Title": "Aerospace Engineers",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2021.00",
+      "Title": "Agricultural Engineers",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2031.00",
+      "Title": "Bioengineers and Biomedical Engineers",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2041.00",
+      "Title": "Chemical Engineers",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2051.00",
+      "Title": "Civil Engineers",
+      "Job Zone": "4",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2051.01",
+      "Title": "Transportation Engineers",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2051.02",
+      "Title": "Water/Wastewater Engineers",
+      "Job Zone": "4",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2061.00",
+      "Title": "Computer Hardware Engineers",
+      "Job Zone": "4",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2071.00",
+      "Title": "Electrical Engineers",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2072.00",
+      "Title": "Electronics Engineers, Except Computer",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2072.01",
+      "Title": "Radio Frequency Identification Device Specialists",
+      "Job Zone": "4",
+      "Date": "07/2015",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2081.00",
+      "Title": "Environmental Engineers",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2111.00",
+      "Title": "Health and Safety Engineers, Except Mining Safety Engineers and Inspectors",
+      "Job Zone": "4",
+      "Date": "11/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2111.02",
+      "Title": "Fire-Prevention and Protection Engineers",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2112.00",
+      "Title": "Industrial Engineers",
+      "Job Zone": "4",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2112.01",
+      "Title": "Human Factors Engineers and Ergonomists",
+      "Job Zone": "5",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2112.02",
+      "Title": "Validation Engineers",
+      "Job Zone": "4",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2112.03",
+      "Title": "Manufacturing Engineers",
+      "Job Zone": "4",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2121.00",
+      "Title": "Marine Engineers and Naval Architects",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2131.00",
+      "Title": "Materials Engineers",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2141.00",
+      "Title": "Mechanical Engineers",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2141.01",
+      "Title": "Fuel Cell Engineers",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2141.02",
+      "Title": "Automotive Engineers",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2151.00",
+      "Title": "Mining and Geological Engineers, Including Mining Safety Engineers",
+      "Job Zone": "4",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2161.00",
+      "Title": "Nuclear Engineers",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2171.00",
+      "Title": "Petroleum Engineers",
+      "Job Zone": "4",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2199.03",
+      "Title": "Energy Engineers, Except Wind and Solar",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2199.05",
+      "Title": "Mechatronics Engineers",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2199.06",
+      "Title": "Microsystems Engineers",
+      "Job Zone": "5",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2199.07",
+      "Title": "Photonics Engineers",
+      "Job Zone": "4",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2199.08",
+      "Title": "Robotics Engineers",
+      "Job Zone": "4",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2199.09",
+      "Title": "Nanosystems Engineers",
+      "Job Zone": "5",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2199.10",
+      "Title": "Wind Energy Engineers",
+      "Job Zone": "4",
+      "Date": "07/2012",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-2199.11",
+      "Title": "Solar Energy Systems Engineers",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-3011.00",
+      "Title": "Architectural and Civil Drafters",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-3012.00",
+      "Title": "Electrical and Electronics Drafters",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-3013.00",
+      "Title": "Mechanical Drafters",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-3021.00",
+      "Title": "Aerospace Engineering and Operations Technologists and Technicians",
+      "Job Zone": "3",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-3022.00",
+      "Title": "Civil Engineering Technologists and Technicians",
+      "Job Zone": "3",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-3023.00",
+      "Title": "Electrical and Electronic Engineering Technologists and Technicians",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-3024.00",
+      "Title": "Electro-Mechanical and Mechatronics Technologists and Technicians",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-3024.01",
+      "Title": "Robotics Technicians",
+      "Job Zone": "3",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-3025.00",
+      "Title": "Environmental Engineering Technologists and Technicians",
+      "Job Zone": "4",
+      "Date": "07/2014",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-3026.00",
+      "Title": "Industrial Engineering Technologists and Technicians",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-3026.01",
+      "Title": "Nanotechnology Engineering Technologists and Technicians",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-3027.00",
+      "Title": "Mechanical Engineering Technologists and Technicians",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-3027.01",
+      "Title": "Automotive Engineering Technicians",
+      "Job Zone": "3",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-3028.00",
+      "Title": "Calibration Technologists and Technicians",
+      "Job Zone": "3",
+      "Date": "11/2021",
+      "Domain Source": "Analyst - Preliminary"
+    },
+    {
+      "O*NET-SOC Code": "17-3029.01",
+      "Title": "Non-Destructive Testing Specialists",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-3029.08",
+      "Title": "Photonics Technicians",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "17-3031.00",
+      "Title": "Surveying and Mapping Technicians",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-1011.00",
+      "Title": "Animal Scientists",
+      "Job Zone": "5",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-1012.00",
+      "Title": "Food Scientists and Technologists",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-1013.00",
+      "Title": "Soil and Plant Scientists",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-1021.00",
+      "Title": "Biochemists and Biophysicists",
+      "Job Zone": "5",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-1022.00",
+      "Title": "Microbiologists",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-1023.00",
+      "Title": "Zoologists and Wildlife Biologists",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-1029.01",
+      "Title": "Bioinformatics Scientists",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-1029.02",
+      "Title": "Molecular and Cellular Biologists",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-1029.03",
+      "Title": "Geneticists",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-1029.04",
+      "Title": "Biologists",
+      "Job Zone": "5",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-1031.00",
+      "Title": "Conservation Scientists",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-1031.02",
+      "Title": "Range Managers",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-1031.03",
+      "Title": "Park Naturalists",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-1032.00",
+      "Title": "Foresters",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-1041.00",
+      "Title": "Epidemiologists",
+      "Job Zone": "5",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-1042.00",
+      "Title": "Medical Scientists, Except Epidemiologists",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-2011.00",
+      "Title": "Astronomers",
+      "Job Zone": "5",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-2012.00",
+      "Title": "Physicists",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-2021.00",
+      "Title": "Atmospheric and Space Scientists",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-2031.00",
+      "Title": "Chemists",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-2032.00",
+      "Title": "Materials Scientists",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-2041.00",
+      "Title": "Environmental Scientists and Specialists, Including Health",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-2041.01",
+      "Title": "Climate Change Policy Analysts",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-2041.02",
+      "Title": "Environmental Restoration Planners",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-2041.03",
+      "Title": "Industrial Ecologists",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-2042.00",
+      "Title": "Geoscientists, Except Hydrologists and Geographers",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-2043.00",
+      "Title": "Hydrologists",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-2099.01",
+      "Title": "Remote Sensing Scientists and Technologists",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-3011.00",
+      "Title": "Economists",
+      "Job Zone": "5",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-3011.01",
+      "Title": "Environmental Economists",
+      "Job Zone": "5",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-3022.00",
+      "Title": "Survey Researchers",
+      "Job Zone": "5",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-3032.00",
+      "Title": "Industrial-Organizational Psychologists",
+      "Job Zone": "5",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-3033.00",
+      "Title": "Clinical and Counseling Psychologists",
+      "Job Zone": "5",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-3034.00",
+      "Title": "School Psychologists",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-3039.02",
+      "Title": "Neuropsychologists",
+      "Job Zone": "5",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-3039.03",
+      "Title": "Clinical Neuropsychologists",
+      "Job Zone": "5",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-3041.00",
+      "Title": "Sociologists",
+      "Job Zone": "5",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-3051.00",
+      "Title": "Urban and Regional Planners",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-3091.00",
+      "Title": "Anthropologists and Archeologists",
+      "Job Zone": "5",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-3092.00",
+      "Title": "Geographers",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-3093.00",
+      "Title": "Historians",
+      "Job Zone": "5",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-3094.00",
+      "Title": "Political Scientists",
+      "Job Zone": "5",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-3099.01",
+      "Title": "Transportation Planners",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-4012.00",
+      "Title": "Agricultural Technicians",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-4012.01",
+      "Title": "Precision Agriculture Technicians",
+      "Job Zone": "3",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-4013.00",
+      "Title": "Food Science Technicians",
+      "Job Zone": "3",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-4021.00",
+      "Title": "Biological Technicians",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-4031.00",
+      "Title": "Chemical Technicians",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-4042.00",
+      "Title": "Environmental Science and Protection Technicians, Including Health",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-4043.00",
+      "Title": "Geological Technicians, Except Hydrologic Technicians",
+      "Job Zone": "4",
+      "Date": "11/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-4044.00",
+      "Title": "Hydrologic Technicians",
+      "Job Zone": "3",
+      "Date": "11/2021",
+      "Domain Source": "Analyst - Preliminary"
+    },
+    {
+      "O*NET-SOC Code": "19-4051.00",
+      "Title": "Nuclear Technicians",
+      "Job Zone": "3",
+      "Date": "11/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-4051.02",
+      "Title": "Nuclear Monitoring Technicians",
+      "Job Zone": "3",
+      "Date": "07/2014",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-4061.00",
+      "Title": "Social Science Research Assistants",
+      "Job Zone": "4",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-4071.00",
+      "Title": "Forest and Conservation Technicians",
+      "Job Zone": "3",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-4092.00",
+      "Title": "Forensic Science Technicians",
+      "Job Zone": "3",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-4099.01",
+      "Title": "Quality Control Analysts",
+      "Job Zone": "3",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-4099.03",
+      "Title": "Remote Sensing Technicians",
+      "Job Zone": "4",
+      "Date": "07/2012",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-5011.00",
+      "Title": "Occupational Health and Safety Specialists",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "19-5012.00",
+      "Title": "Occupational Health and Safety Technicians",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "21-1011.00",
+      "Title": "Substance Abuse and Behavioral Disorder Counselors",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "21-1012.00",
+      "Title": "Educational, Guidance, and Career Counselors and Advisors",
+      "Job Zone": "5",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "21-1013.00",
+      "Title": "Marriage and Family Therapists",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "21-1014.00",
+      "Title": "Mental Health Counselors",
+      "Job Zone": "5",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "21-1015.00",
+      "Title": "Rehabilitation Counselors",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "21-1021.00",
+      "Title": "Child, Family, and School Social Workers",
+      "Job Zone": "4",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "21-1022.00",
+      "Title": "Healthcare Social Workers",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "21-1023.00",
+      "Title": "Mental Health and Substance Abuse Social Workers",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "21-1091.00",
+      "Title": "Health Education Specialists",
+      "Job Zone": "4",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "21-1092.00",
+      "Title": "Probation Officers and Correctional Treatment Specialists",
+      "Job Zone": "4",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "21-1093.00",
+      "Title": "Social and Human Service Assistants",
+      "Job Zone": "4",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "21-1094.00",
+      "Title": "Community Health Workers",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "21-2011.00",
+      "Title": "Clergy",
+      "Job Zone": "5",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "21-2021.00",
+      "Title": "Directors, Religious Activities and Education",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "23-1011.00",
+      "Title": "Lawyers",
+      "Job Zone": "5",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "23-1012.00",
+      "Title": "Judicial Law Clerks",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "23-1021.00",
+      "Title": "Administrative Law Judges, Adjudicators, and Hearing Officers",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "23-1022.00",
+      "Title": "Arbitrators, Mediators, and Conciliators",
+      "Job Zone": "5",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "23-1023.00",
+      "Title": "Judges, Magistrate Judges, and Magistrates",
+      "Job Zone": "5",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "23-2011.00",
+      "Title": "Paralegals and Legal Assistants",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "23-2093.00",
+      "Title": "Title Examiners, Abstractors, and Searchers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1011.00",
+      "Title": "Business Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1021.00",
+      "Title": "Computer Science Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1022.00",
+      "Title": "Mathematical Science Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1031.00",
+      "Title": "Architecture Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1032.00",
+      "Title": "Engineering Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1041.00",
+      "Title": "Agricultural Sciences Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1042.00",
+      "Title": "Biological Science Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1043.00",
+      "Title": "Forestry and Conservation Science Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1051.00",
+      "Title": "Atmospheric, Earth, Marine, and Space Sciences Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1052.00",
+      "Title": "Chemistry Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1053.00",
+      "Title": "Environmental Science Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1054.00",
+      "Title": "Physics Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1061.00",
+      "Title": "Anthropology and Archeology Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1062.00",
+      "Title": "Area, Ethnic, and Cultural Studies Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1063.00",
+      "Title": "Economics Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1064.00",
+      "Title": "Geography Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1065.00",
+      "Title": "Political Science Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1066.00",
+      "Title": "Psychology Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1067.00",
+      "Title": "Sociology Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1071.00",
+      "Title": "Health Specialties Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1072.00",
+      "Title": "Nursing Instructors and Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1081.00",
+      "Title": "Education Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1082.00",
+      "Title": "Library Science Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1111.00",
+      "Title": "Criminal Justice and Law Enforcement Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1112.00",
+      "Title": "Law Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1113.00",
+      "Title": "Social Work Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1121.00",
+      "Title": "Art, Drama, and Music Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1122.00",
+      "Title": "Communications Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1123.00",
+      "Title": "English Language and Literature Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1124.00",
+      "Title": "Foreign Language and Literature Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1125.00",
+      "Title": "History Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1126.00",
+      "Title": "Philosophy and Religion Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1192.00",
+      "Title": "Family and Consumer Sciences Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1193.00",
+      "Title": "Recreation and Fitness Studies Teachers, Postsecondary",
+      "Job Zone": "5",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-1194.00",
+      "Title": "Career/Technical Education Teachers, Postsecondary",
+      "Job Zone": "3",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-2011.00",
+      "Title": "Preschool Teachers, Except Special Education",
+      "Job Zone": "3",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-2012.00",
+      "Title": "Kindergarten Teachers, Except Special Education",
+      "Job Zone": "4",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-2021.00",
+      "Title": "Elementary School Teachers, Except Special Education",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-2022.00",
+      "Title": "Middle School Teachers, Except Special and Career/Technical Education",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-2023.00",
+      "Title": "Career/Technical Education Teachers, Middle School",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-2031.00",
+      "Title": "Secondary School Teachers, Except Special and Career/Technical Education",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-2032.00",
+      "Title": "Career/Technical Education Teachers, Secondary School",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-2051.00",
+      "Title": "Special Education Teachers, Preschool",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-2055.00",
+      "Title": "Special Education Teachers, Kindergarten",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-2056.00",
+      "Title": "Special Education Teachers, Elementary School",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-2057.00",
+      "Title": "Special Education Teachers, Middle School",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-2058.00",
+      "Title": "Special Education Teachers, Secondary School",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-2059.01",
+      "Title": "Adapted Physical Education Specialists",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-3011.00",
+      "Title": "Adult Basic Education, Adult Secondary Education, and English as a Second Language Instructors",
+      "Job Zone": "4",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-3021.00",
+      "Title": "Self-Enrichment Teachers",
+      "Job Zone": "3",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-3031.00",
+      "Title": "Substitute Teachers, Short-Term",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-3041.00",
+      "Title": "Tutors",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-4011.00",
+      "Title": "Archivists",
+      "Job Zone": "5",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-4012.00",
+      "Title": "Curators",
+      "Job Zone": "5",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-4013.00",
+      "Title": "Museum Technicians and Conservators",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-4022.00",
+      "Title": "Librarians and Media Collections Specialists",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-4031.00",
+      "Title": "Library Technicians",
+      "Job Zone": "3",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-9021.00",
+      "Title": "Farm and Home Management Educators",
+      "Job Zone": "5",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-9031.00",
+      "Title": "Instructional Coordinators",
+      "Job Zone": "5",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-9042.00",
+      "Title": "Teaching Assistants, Preschool, Elementary, Middle, and Secondary School, Except Special Education",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-9043.00",
+      "Title": "Teaching Assistants, Special Education",
+      "Job Zone": "3",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "25-9044.00",
+      "Title": "Teaching Assistants, Postsecondary",
+      "Job Zone": "5",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-1011.00",
+      "Title": "Art Directors",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-1012.00",
+      "Title": "Craft Artists",
+      "Job Zone": "3",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-1013.00",
+      "Title": "Fine Artists, Including Painters, Sculptors, and Illustrators",
+      "Job Zone": "3",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-1014.00",
+      "Title": "Special Effects Artists and Animators",
+      "Job Zone": "4",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-1021.00",
+      "Title": "Commercial and Industrial Designers",
+      "Job Zone": "4",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-1022.00",
+      "Title": "Fashion Designers",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-1023.00",
+      "Title": "Floral Designers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-1024.00",
+      "Title": "Graphic Designers",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-1025.00",
+      "Title": "Interior Designers",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-1026.00",
+      "Title": "Merchandise Displayers and Window Trimmers",
+      "Job Zone": "3",
+      "Date": "07/2015",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-1027.00",
+      "Title": "Set and Exhibit Designers",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-2011.00",
+      "Title": "Actors",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-2012.00",
+      "Title": "Producers and Directors",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-2012.03",
+      "Title": "Media Programming Directors",
+      "Job Zone": "4",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-2012.04",
+      "Title": "Talent Directors",
+      "Job Zone": "4",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-2012.05",
+      "Title": "Media Technical Directors/Managers",
+      "Job Zone": "4",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-2021.00",
+      "Title": "Athletes and Sports Competitors",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-2022.00",
+      "Title": "Coaches and Scouts",
+      "Job Zone": "4",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-2023.00",
+      "Title": "Umpires, Referees, and Other Sports Officials",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-2031.00",
+      "Title": "Dancers",
+      "Job Zone": "3",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-2032.00",
+      "Title": "Choreographers",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-2041.00",
+      "Title": "Music Directors and Composers",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-2042.00",
+      "Title": "Musicians and Singers",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-2091.00",
+      "Title": "Disc Jockeys, Except Radio",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-3011.00",
+      "Title": "Broadcast Announcers and Radio Disc Jockeys",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-3023.00",
+      "Title": "News Analysts, Reporters, and Journalists",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-3031.00",
+      "Title": "Public Relations Specialists",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-3041.00",
+      "Title": "Editors",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-3042.00",
+      "Title": "Technical Writers",
+      "Job Zone": "4",
+      "Date": "07/2012",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-3043.00",
+      "Title": "Writers and Authors",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-3043.05",
+      "Title": "Poets, Lyricists and Creative Writers",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-3091.00",
+      "Title": "Interpreters and Translators",
+      "Job Zone": "4",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-3092.00",
+      "Title": "Court Reporters and Simultaneous Captioners",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-4011.00",
+      "Title": "Audio and Video Technicians",
+      "Job Zone": "3",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-4012.00",
+      "Title": "Broadcast Technicians",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-4014.00",
+      "Title": "Sound Engineering Technicians",
+      "Job Zone": "3",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-4015.00",
+      "Title": "Lighting Technicians",
+      "Job Zone": "3",
+      "Date": "11/2021",
+      "Domain Source": "Analyst - Preliminary"
+    },
+    {
+      "O*NET-SOC Code": "27-4021.00",
+      "Title": "Photographers",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-4031.00",
+      "Title": "Camera Operators, Television, Video, and Film",
+      "Job Zone": "3",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "27-4032.00",
+      "Title": "Film and Video Editors",
+      "Job Zone": "4",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1011.00",
+      "Title": "Chiropractors",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1021.00",
+      "Title": "Dentists, General",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1022.00",
+      "Title": "Oral and Maxillofacial Surgeons",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1023.00",
+      "Title": "Orthodontists",
+      "Job Zone": "5",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1024.00",
+      "Title": "Prosthodontists",
+      "Job Zone": "5",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1031.00",
+      "Title": "Dietitians and Nutritionists",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1041.00",
+      "Title": "Optometrists",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1051.00",
+      "Title": "Pharmacists",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1071.00",
+      "Title": "Physician Assistants",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1071.01",
+      "Title": "Anesthesiologist Assistants",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1081.00",
+      "Title": "Podiatrists",
+      "Job Zone": "5",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1122.00",
+      "Title": "Occupational Therapists",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1122.01",
+      "Title": "Low Vision Therapists, Orientation and Mobility Specialists, and Vision Rehabilitation Therapists",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1123.00",
+      "Title": "Physical Therapists",
+      "Job Zone": "5",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1124.00",
+      "Title": "Radiation Therapists",
+      "Job Zone": "3",
+      "Date": "07/2013",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1125.00",
+      "Title": "Recreational Therapists",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1126.00",
+      "Title": "Respiratory Therapists",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1127.00",
+      "Title": "Speech-Language Pathologists",
+      "Job Zone": "5",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1128.00",
+      "Title": "Exercise Physiologists",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1129.01",
+      "Title": "Art Therapists",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1129.02",
+      "Title": "Music Therapists",
+      "Job Zone": "4",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1131.00",
+      "Title": "Veterinarians",
+      "Job Zone": "5",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1141.00",
+      "Title": "Registered Nurses",
+      "Job Zone": "4",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1141.01",
+      "Title": "Acute Care Nurses",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1141.02",
+      "Title": "Advanced Practice Psychiatric Nurses",
+      "Job Zone": "5",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1141.03",
+      "Title": "Critical Care Nurses",
+      "Job Zone": "4",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1141.04",
+      "Title": "Clinical Nurse Specialists",
+      "Job Zone": "5",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1151.00",
+      "Title": "Nurse Anesthetists",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1161.00",
+      "Title": "Nurse Midwives",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1171.00",
+      "Title": "Nurse Practitioners",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1181.00",
+      "Title": "Audiologists",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1211.00",
+      "Title": "Anesthesiologists",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1212.00",
+      "Title": "Cardiologists",
+      "Job Zone": "5",
+      "Date": "11/2021",
+      "Domain Source": "Analyst - Preliminary"
+    },
+    {
+      "O*NET-SOC Code": "29-1213.00",
+      "Title": "Dermatologists",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1214.00",
+      "Title": "Emergency Medicine Physicians",
+      "Job Zone": "5",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1215.00",
+      "Title": "Family Medicine Physicians",
+      "Job Zone": "5",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1216.00",
+      "Title": "General Internal Medicine Physicians",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1217.00",
+      "Title": "Neurologists",
+      "Job Zone": "5",
+      "Date": "07/2012",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1218.00",
+      "Title": "Obstetricians and Gynecologists",
+      "Job Zone": "5",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1221.00",
+      "Title": "Pediatricians, General",
+      "Job Zone": "5",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1222.00",
+      "Title": "Physicians, Pathologists",
+      "Job Zone": "5",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1223.00",
+      "Title": "Psychiatrists",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1224.00",
+      "Title": "Radiologists",
+      "Job Zone": "5",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1229.01",
+      "Title": "Allergists and Immunologists",
+      "Job Zone": "5",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1229.02",
+      "Title": "Hospitalists",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1229.03",
+      "Title": "Urologists",
+      "Job Zone": "5",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1229.04",
+      "Title": "Physical Medicine and Rehabilitation Physicians",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1229.05",
+      "Title": "Preventive Medicine Physicians",
+      "Job Zone": "5",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1229.06",
+      "Title": "Sports Medicine Physicians",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1241.00",
+      "Title": "Ophthalmologists, Except Pediatric",
+      "Job Zone": "5",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1242.00",
+      "Title": "Orthopedic Surgeons, Except Pediatric",
+      "Job Zone": "5",
+      "Date": "11/2021",
+      "Domain Source": "Analyst - Preliminary"
+    },
+    {
+      "O*NET-SOC Code": "29-1243.00",
+      "Title": "Pediatric Surgeons",
+      "Job Zone": "5",
+      "Date": "11/2021",
+      "Domain Source": "Analyst - Preliminary"
+    },
+    {
+      "O*NET-SOC Code": "29-1291.00",
+      "Title": "Acupuncturists",
+      "Job Zone": "5",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1292.00",
+      "Title": "Dental Hygienists",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1299.01",
+      "Title": "Naturopathic Physicians",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-1299.02",
+      "Title": "Orthoptists",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2011.00",
+      "Title": "Medical and Clinical Laboratory Technologists",
+      "Job Zone": "4",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2011.01",
+      "Title": "Cytogenetic Technologists",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2011.02",
+      "Title": "Cytotechnologists",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2011.04",
+      "Title": "Histotechnologists",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2012.00",
+      "Title": "Medical and Clinical Laboratory Technicians",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2012.01",
+      "Title": "Histology Technicians",
+      "Job Zone": "3",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2031.00",
+      "Title": "Cardiovascular Technologists and Technicians",
+      "Job Zone": "3",
+      "Date": "07/2014",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2032.00",
+      "Title": "Diagnostic Medical Sonographers",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2033.00",
+      "Title": "Nuclear Medicine Technologists",
+      "Job Zone": "3",
+      "Date": "07/2013",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2034.00",
+      "Title": "Radiologic Technologists and Technicians",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2035.00",
+      "Title": "Magnetic Resonance Imaging Technologists",
+      "Job Zone": "3",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2036.00",
+      "Title": "Medical Dosimetrists",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2042.00",
+      "Title": "Emergency Medical Technicians",
+      "Job Zone": "3",
+      "Date": "11/2021",
+      "Domain Source": "Analyst - Preliminary"
+    },
+    {
+      "O*NET-SOC Code": "29-2043.00",
+      "Title": "Paramedics",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2051.00",
+      "Title": "Dietetic Technicians",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2052.00",
+      "Title": "Pharmacy Technicians",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2053.00",
+      "Title": "Psychiatric Technicians",
+      "Job Zone": "3",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2055.00",
+      "Title": "Surgical Technologists",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2056.00",
+      "Title": "Veterinary Technologists and Technicians",
+      "Job Zone": "3",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2057.00",
+      "Title": "Ophthalmic Medical Technicians",
+      "Job Zone": "3",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2061.00",
+      "Title": "Licensed Practical and Licensed Vocational Nurses",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2072.00",
+      "Title": "Medical Records Specialists",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2081.00",
+      "Title": "Opticians, Dispensing",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2091.00",
+      "Title": "Orthotists and Prosthetists",
+      "Job Zone": "5",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2092.00",
+      "Title": "Hearing Aid Specialists",
+      "Job Zone": "3",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2099.01",
+      "Title": "Neurodiagnostic Technologists",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2099.05",
+      "Title": "Ophthalmic Medical Technologists",
+      "Job Zone": "3",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-2099.08",
+      "Title": "Patient Representatives",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-9021.00",
+      "Title": "Health Information Technologists and Medical Registrars",
+      "Job Zone": "3",
+      "Date": "11/2021",
+      "Domain Source": "Analyst - Preliminary"
+    },
+    {
+      "O*NET-SOC Code": "29-9091.00",
+      "Title": "Athletic Trainers",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-9092.00",
+      "Title": "Genetic Counselors",
+      "Job Zone": "5",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-9093.00",
+      "Title": "Surgical Assistants",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "29-9099.01",
+      "Title": "Midwives",
+      "Job Zone": "5",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-1121.00",
+      "Title": "Home Health Aides",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-1122.00",
+      "Title": "Personal Care Aides",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-1131.00",
+      "Title": "Nursing Assistants",
+      "Job Zone": "3",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-1132.00",
+      "Title": "Orderlies",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-1133.00",
+      "Title": "Psychiatric Aides",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-2011.00",
+      "Title": "Occupational Therapy Assistants",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-2012.00",
+      "Title": "Occupational Therapy Aides",
+      "Job Zone": "3",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-2021.00",
+      "Title": "Physical Therapist Assistants",
+      "Job Zone": "3",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-2022.00",
+      "Title": "Physical Therapist Aides",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-9011.00",
+      "Title": "Massage Therapists",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-9091.00",
+      "Title": "Dental Assistants",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-9092.00",
+      "Title": "Medical Assistants",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-9093.00",
+      "Title": "Medical Equipment Preparers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-9094.00",
+      "Title": "Medical Transcriptionists",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-9095.00",
+      "Title": "Pharmacy Aides",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-9096.00",
+      "Title": "Veterinary Assistants and Laboratory Animal Caretakers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-9097.00",
+      "Title": "Phlebotomists",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-9099.01",
+      "Title": "Speech-Language Pathology Assistants",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "31-9099.02",
+      "Title": "Endoscopy Technicians",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-1011.00",
+      "Title": "First-Line Supervisors of Correctional Officers",
+      "Job Zone": "3",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-1012.00",
+      "Title": "First-Line Supervisors of Police and Detectives",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-1021.00",
+      "Title": "First-Line Supervisors of Firefighting and Prevention Workers",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-1091.00",
+      "Title": "First-Line Supervisors of Security Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-2011.00",
+      "Title": "Firefighters",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-2021.00",
+      "Title": "Fire Inspectors and Investigators",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-2022.00",
+      "Title": "Forest Fire Inspectors and Prevention Specialists",
+      "Job Zone": "3",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-3011.00",
+      "Title": "Bailiffs",
+      "Job Zone": "3",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-3012.00",
+      "Title": "Correctional Officers and Jailers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-3021.00",
+      "Title": "Detectives and Criminal Investigators",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-3021.02",
+      "Title": "Police Identification and Records Officers",
+      "Job Zone": "3",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-3021.06",
+      "Title": "Intelligence Analysts",
+      "Job Zone": "4",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-3031.00",
+      "Title": "Fish and Game Wardens",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-3041.00",
+      "Title": "Parking Enforcement Workers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-3051.00",
+      "Title": "Police and Sheriff's Patrol Officers",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-3051.04",
+      "Title": "Customs and Border Protection Officers",
+      "Job Zone": "3",
+      "Date": "07/2012",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-3052.00",
+      "Title": "Transit and Railroad Police",
+      "Job Zone": "3",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-9011.00",
+      "Title": "Animal Control Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-9021.00",
+      "Title": "Private Detectives and Investigators",
+      "Job Zone": "3",
+      "Date": "07/2015",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-9031.00",
+      "Title": "Gambling Surveillance Officers and Gambling Investigators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-9032.00",
+      "Title": "Security Guards",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-9091.00",
+      "Title": "Crossing Guards and Flaggers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-9092.00",
+      "Title": "Lifeguards, Ski Patrol, and Other Recreational Protective Service Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-9093.00",
+      "Title": "Transportation Security Screeners",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-9094.00",
+      "Title": "School Bus Monitors",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "33-9099.02",
+      "Title": "Retail Loss Prevention Specialists",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "35-1011.00",
+      "Title": "Chefs and Head Cooks",
+      "Job Zone": "3",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "35-1012.00",
+      "Title": "First-Line Supervisors of Food Preparation and Serving Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "35-2011.00",
+      "Title": "Cooks, Fast Food",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "35-2012.00",
+      "Title": "Cooks, Institution and Cafeteria",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "35-2013.00",
+      "Title": "Cooks, Private Household",
+      "Job Zone": "3",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "35-2014.00",
+      "Title": "Cooks, Restaurant",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "35-2015.00",
+      "Title": "Cooks, Short Order",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "35-2021.00",
+      "Title": "Food Preparation Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "35-3011.00",
+      "Title": "Bartenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "35-3023.00",
+      "Title": "Fast Food and Counter Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "35-3023.01",
+      "Title": "Baristas",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "35-3031.00",
+      "Title": "Waiters and Waitresses",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "35-3041.00",
+      "Title": "Food Servers, Nonrestaurant",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "35-9011.00",
+      "Title": "Dining Room and Cafeteria Attendants and Bartender Helpers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "35-9021.00",
+      "Title": "Dishwashers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "35-9031.00",
+      "Title": "Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "37-1011.00",
+      "Title": "First-Line Supervisors of Housekeeping and Janitorial Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "37-1012.00",
+      "Title": "First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "37-2011.00",
+      "Title": "Janitors and Cleaners, Except Maids and Housekeeping Cleaners",
+      "Job Zone": "3",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "37-2012.00",
+      "Title": "Maids and Housekeeping Cleaners",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "37-2021.00",
+      "Title": "Pest Control Workers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "37-3011.00",
+      "Title": "Landscaping and Groundskeeping Workers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "37-3012.00",
+      "Title": "Pesticide Handlers, Sprayers, and Applicators, Vegetation",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "37-3013.00",
+      "Title": "Tree Trimmers and Pruners",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-1013.00",
+      "Title": "First-Line Supervisors of Gambling Services Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-1014.00",
+      "Title": "First-Line Supervisors of Entertainment and Recreation Workers, Except Gambling Services",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-1022.00",
+      "Title": "First-Line Supervisors of Personal Service Workers",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-2011.00",
+      "Title": "Animal Trainers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-2021.00",
+      "Title": "Animal Caretakers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-3011.00",
+      "Title": "Gambling Dealers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-3012.00",
+      "Title": "Gambling and Sports Book Writers and Runners",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-3021.00",
+      "Title": "Motion Picture Projectionists",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-3031.00",
+      "Title": "Ushers, Lobby Attendants, and Ticket Takers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-3091.00",
+      "Title": "Amusement and Recreation Attendants",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-3092.00",
+      "Title": "Costume Attendants",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-3093.00",
+      "Title": "Locker Room, Coatroom, and Dressing Room Attendants",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-4011.00",
+      "Title": "Embalmers",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-4012.00",
+      "Title": "Crematory Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-4021.00",
+      "Title": "Funeral Attendants",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-4031.00",
+      "Title": "Morticians, Undertakers, and Funeral Arrangers",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-5011.00",
+      "Title": "Barbers",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-5012.00",
+      "Title": "Hairdressers, Hairstylists, and Cosmetologists",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-5091.00",
+      "Title": "Makeup Artists, Theatrical and Performance",
+      "Job Zone": "3",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-5092.00",
+      "Title": "Manicurists and Pedicurists",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-5093.00",
+      "Title": "Shampooers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-5094.00",
+      "Title": "Skincare Specialists",
+      "Job Zone": "3",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-6011.00",
+      "Title": "Baggage Porters and Bellhops",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-6012.00",
+      "Title": "Concierges",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-7011.00",
+      "Title": "Tour Guides and Escorts",
+      "Job Zone": "3",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-7012.00",
+      "Title": "Travel Guides",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-9011.00",
+      "Title": "Childcare Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-9011.01",
+      "Title": "Nannies",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-9031.00",
+      "Title": "Exercise Trainers and Group Fitness Instructors",
+      "Job Zone": "3",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-9032.00",
+      "Title": "Recreation Workers",
+      "Job Zone": "4",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "39-9041.00",
+      "Title": "Residential Advisors",
+      "Job Zone": "3",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-1011.00",
+      "Title": "First-Line Supervisors of Retail Sales Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-1012.00",
+      "Title": "First-Line Supervisors of Non-Retail Sales Workers",
+      "Job Zone": "4",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-2011.00",
+      "Title": "Cashiers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-2012.00",
+      "Title": "Gambling Change Persons and Booth Cashiers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-2021.00",
+      "Title": "Counter and Rental Clerks",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-2022.00",
+      "Title": "Parts Salespersons",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-2031.00",
+      "Title": "Retail Salespersons",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-3011.00",
+      "Title": "Advertising Sales Agents",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-3021.00",
+      "Title": "Insurance Sales Agents",
+      "Job Zone": "4",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-3031.00",
+      "Title": "Securities, Commodities, and Financial Services Sales Agents",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-3041.00",
+      "Title": "Travel Agents",
+      "Job Zone": "3",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-3091.00",
+      "Title": "Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-4011.00",
+      "Title": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+      "Job Zone": "4",
+      "Date": "07/2014",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-4011.07",
+      "Title": "Solar Sales Representatives and Assessors",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-4012.00",
+      "Title": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+      "Job Zone": "4",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-9011.00",
+      "Title": "Demonstrators and Product Promoters",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-9012.00",
+      "Title": "Models",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-9021.00",
+      "Title": "Real Estate Brokers",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-9022.00",
+      "Title": "Real Estate Sales Agents",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-9031.00",
+      "Title": "Sales Engineers",
+      "Job Zone": "4",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-9041.00",
+      "Title": "Telemarketers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "41-9091.00",
+      "Title": "Door-to-Door Sales Workers, News and Street Vendors, and Related Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-1011.00",
+      "Title": "First-Line Supervisors of Office and Administrative Support Workers",
+      "Job Zone": "3",
+      "Date": "07/2015",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-2011.00",
+      "Title": "Switchboard Operators, Including Answering Service",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-2021.00",
+      "Title": "Telephone Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-3011.00",
+      "Title": "Bill and Account Collectors",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-3021.00",
+      "Title": "Billing and Posting Clerks",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-3031.00",
+      "Title": "Bookkeeping, Accounting, and Auditing Clerks",
+      "Job Zone": "3",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-3041.00",
+      "Title": "Gambling Cage Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-3051.00",
+      "Title": "Payroll and Timekeeping Clerks",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-3061.00",
+      "Title": "Procurement Clerks",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-3071.00",
+      "Title": "Tellers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-4011.00",
+      "Title": "Brokerage Clerks",
+      "Job Zone": "3",
+      "Date": "07/2014",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-4021.00",
+      "Title": "Correspondence Clerks",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-4031.00",
+      "Title": "Court, Municipal, and License Clerks",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-4041.00",
+      "Title": "Credit Authorizers, Checkers, and Clerks",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-4051.00",
+      "Title": "Customer Service Representatives",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-4061.00",
+      "Title": "Eligibility Interviewers, Government Programs",
+      "Job Zone": "3",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-4071.00",
+      "Title": "File Clerks",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-4081.00",
+      "Title": "Hotel, Motel, and Resort Desk Clerks",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-4111.00",
+      "Title": "Interviewers, Except Eligibility and Loan",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-4121.00",
+      "Title": "Library Assistants, Clerical",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-4131.00",
+      "Title": "Loan Interviewers and Clerks",
+      "Job Zone": "3",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-4141.00",
+      "Title": "New Accounts Clerks",
+      "Job Zone": "3",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-4151.00",
+      "Title": "Order Clerks",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-4161.00",
+      "Title": "Human Resources Assistants, Except Payroll and Timekeeping",
+      "Job Zone": "3",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-4171.00",
+      "Title": "Receptionists and Information Clerks",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-4181.00",
+      "Title": "Reservation and Transportation Ticket Agents and Travel Clerks",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-5011.00",
+      "Title": "Cargo and Freight Agents",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-5011.01",
+      "Title": "Freight Forwarders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-5021.00",
+      "Title": "Couriers and Messengers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-5031.00",
+      "Title": "Public Safety Telecommunicators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-5032.00",
+      "Title": "Dispatchers, Except Police, Fire, and Ambulance",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-5041.00",
+      "Title": "Meter Readers, Utilities",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-5051.00",
+      "Title": "Postal Service Clerks",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-5052.00",
+      "Title": "Postal Service Mail Carriers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-5053.00",
+      "Title": "Postal Service Mail Sorters, Processors, and Processing Machine Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-5061.00",
+      "Title": "Production, Planning, and Expediting Clerks",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-5071.00",
+      "Title": "Shipping, Receiving, and Inventory Clerks",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-5111.00",
+      "Title": "Weighers, Measurers, Checkers, and Samplers, Recordkeeping",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-6011.00",
+      "Title": "Executive Secretaries and Executive Administrative Assistants",
+      "Job Zone": "3",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-6012.00",
+      "Title": "Legal Secretaries and Administrative Assistants",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-6013.00",
+      "Title": "Medical Secretaries and Administrative Assistants",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-6014.00",
+      "Title": "Secretaries and Administrative Assistants, Except Legal, Medical, and Executive",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-9021.00",
+      "Title": "Data Entry Keyers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-9022.00",
+      "Title": "Word Processors and Typists",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-9031.00",
+      "Title": "Desktop Publishers",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-9041.00",
+      "Title": "Insurance Claims and Policy Processing Clerks",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-9051.00",
+      "Title": "Mail Clerks and Mail Machine Operators, Except Postal Service",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-9061.00",
+      "Title": "Office Clerks, General",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-9071.00",
+      "Title": "Office Machine Operators, Except Computer",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-9081.00",
+      "Title": "Proofreaders and Copy Markers",
+      "Job Zone": "4",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "43-9111.00",
+      "Title": "Statistical Assistants",
+      "Job Zone": "4",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "45-1011.00",
+      "Title": "First-Line Supervisors of Farming, Fishing, and Forestry Workers",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "45-2011.00",
+      "Title": "Agricultural Inspectors",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "45-2021.00",
+      "Title": "Animal Breeders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "45-2041.00",
+      "Title": "Graders and Sorters, Agricultural Products",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "45-2091.00",
+      "Title": "Agricultural Equipment Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "45-2092.00",
+      "Title": "Farmworkers and Laborers, Crop, Nursery, and Greenhouse",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "45-2093.00",
+      "Title": "Farmworkers, Farm, Ranch, and Aquacultural Animals",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "45-3031.00",
+      "Title": "Fishing and Hunting Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "45-4011.00",
+      "Title": "Forest and Conservation Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "45-4021.00",
+      "Title": "Fallers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "45-4022.00",
+      "Title": "Logging Equipment Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "45-4023.00",
+      "Title": "Log Graders and Scalers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-1011.00",
+      "Title": "First-Line Supervisors of Construction Trades and Extraction Workers",
+      "Job Zone": "3",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-1011.03",
+      "Title": "Solar Energy Installation Managers",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2011.00",
+      "Title": "Boilermakers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2021.00",
+      "Title": "Brickmasons and Blockmasons",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2022.00",
+      "Title": "Stonemasons",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2031.00",
+      "Title": "Carpenters",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2041.00",
+      "Title": "Carpet Installers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2042.00",
+      "Title": "Floor Layers, Except Carpet, Wood, and Hard Tiles",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2043.00",
+      "Title": "Floor Sanders and Finishers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2044.00",
+      "Title": "Tile and Stone Setters",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2051.00",
+      "Title": "Cement Masons and Concrete Finishers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2053.00",
+      "Title": "Terrazzo Workers and Finishers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2061.00",
+      "Title": "Construction Laborers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2071.00",
+      "Title": "Paving, Surfacing, and Tamping Equipment Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2072.00",
+      "Title": "Pile Driver Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2073.00",
+      "Title": "Operating Engineers and Other Construction Equipment Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2081.00",
+      "Title": "Drywall and Ceiling Tile Installers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2082.00",
+      "Title": "Tapers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2111.00",
+      "Title": "Electricians",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2121.00",
+      "Title": "Glaziers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2131.00",
+      "Title": "Insulation Workers, Floor, Ceiling, and Wall",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2132.00",
+      "Title": "Insulation Workers, Mechanical",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2141.00",
+      "Title": "Painters, Construction and Maintenance",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2142.00",
+      "Title": "Paperhangers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2151.00",
+      "Title": "Pipelayers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2152.00",
+      "Title": "Plumbers, Pipefitters, and Steamfitters",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2152.04",
+      "Title": "Solar Thermal Installers and Technicians",
+      "Job Zone": "3",
+      "Date": "07/2015",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2161.00",
+      "Title": "Plasterers and Stucco Masons",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2171.00",
+      "Title": "Reinforcing Iron and Rebar Workers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2181.00",
+      "Title": "Roofers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2211.00",
+      "Title": "Sheet Metal Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2221.00",
+      "Title": "Structural Iron and Steel Workers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-2231.00",
+      "Title": "Solar Photovoltaic Installers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-3011.00",
+      "Title": "Helpers--Brickmasons, Blockmasons, Stonemasons, and Tile and Marble Setters",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-3012.00",
+      "Title": "Helpers--Carpenters",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-3013.00",
+      "Title": "Helpers--Electricians",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-3014.00",
+      "Title": "Helpers--Painters, Paperhangers, Plasterers, and Stucco Masons",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-3015.00",
+      "Title": "Helpers--Pipelayers, Plumbers, Pipefitters, and Steamfitters",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-3016.00",
+      "Title": "Helpers--Roofers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-4011.00",
+      "Title": "Construction and Building Inspectors",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-4011.01",
+      "Title": "Energy Auditors",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-4021.00",
+      "Title": "Elevator and Escalator Installers and Repairers",
+      "Job Zone": "3",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-4031.00",
+      "Title": "Fence Erectors",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-4041.00",
+      "Title": "Hazardous Materials Removal Workers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-4051.00",
+      "Title": "Highway Maintenance Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-4061.00",
+      "Title": "Rail-Track Laying and Maintenance Equipment Operators",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-4071.00",
+      "Title": "Septic Tank Servicers and Sewer Pipe Cleaners",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-4091.00",
+      "Title": "Segmental Pavers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-4099.03",
+      "Title": "Weatherization Installers and Technicians",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-5011.00",
+      "Title": "Derrick Operators, Oil and Gas",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-5012.00",
+      "Title": "Rotary Drill Operators, Oil and Gas",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-5013.00",
+      "Title": "Service Unit Operators, Oil and Gas",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-5022.00",
+      "Title": "Excavating and Loading Machine and Dragline Operators, Surface Mining",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-5023.00",
+      "Title": "Earth Drillers, Except Oil and Gas",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-5032.00",
+      "Title": "Explosives Workers, Ordnance Handling Experts, and Blasters",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-5041.00",
+      "Title": "Continuous Mining Machine Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-5043.00",
+      "Title": "Roof Bolters, Mining",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-5044.00",
+      "Title": "Loading and Moving Machine Operators, Underground Mining",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-5051.00",
+      "Title": "Rock Splitters, Quarry",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-5071.00",
+      "Title": "Roustabouts, Oil and Gas",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "47-5081.00",
+      "Title": "Helpers--Extraction Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-1011.00",
+      "Title": "First-Line Supervisors of Mechanics, Installers, and Repairers",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-2011.00",
+      "Title": "Computer, Automated Teller, and Office Machine Repairers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-2021.00",
+      "Title": "Radio, Cellular, and Tower Equipment Installers and Repairers",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-2022.00",
+      "Title": "Telecommunications Equipment Installers and Repairers, Except Line Installers",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-2091.00",
+      "Title": "Avionics Technicians",
+      "Job Zone": "3",
+      "Date": "07/2015",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-2092.00",
+      "Title": "Electric Motor, Power Tool, and Related Repairers",
+      "Job Zone": "3",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-2093.00",
+      "Title": "Electrical and Electronics Installers and Repairers, Transportation Equipment",
+      "Job Zone": "3",
+      "Date": "08/2019",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-2094.00",
+      "Title": "Electrical and Electronics Repairers, Commercial and Industrial Equipment",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-2095.00",
+      "Title": "Electrical and Electronics Repairers, Powerhouse, Substation, and Relay",
+      "Job Zone": "3",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-2096.00",
+      "Title": "Electronic Equipment Installers and Repairers, Motor Vehicles",
+      "Job Zone": "3",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-2097.00",
+      "Title": "Audiovisual Equipment Installers and Repairers",
+      "Job Zone": "3",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-2098.00",
+      "Title": "Security and Fire Alarm Systems Installers",
+      "Job Zone": "3",
+      "Date": "07/2015",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-3011.00",
+      "Title": "Aircraft Mechanics and Service Technicians",
+      "Job Zone": "3",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-3021.00",
+      "Title": "Automotive Body and Related Repairers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-3022.00",
+      "Title": "Automotive Glass Installers and Repairers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-3023.00",
+      "Title": "Automotive Service Technicians and Mechanics",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-3031.00",
+      "Title": "Bus and Truck Mechanics and Diesel Engine Specialists",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-3041.00",
+      "Title": "Farm Equipment Mechanics and Service Technicians",
+      "Job Zone": "3",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-3042.00",
+      "Title": "Mobile Heavy Equipment Mechanics, Except Engines",
+      "Job Zone": "3",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-3043.00",
+      "Title": "Rail Car Repairers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-3051.00",
+      "Title": "Motorboat Mechanics and Service Technicians",
+      "Job Zone": "3",
+      "Date": "07/2015",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-3052.00",
+      "Title": "Motorcycle Mechanics",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-3053.00",
+      "Title": "Outdoor Power Equipment and Other Small Engine Mechanics",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-3091.00",
+      "Title": "Bicycle Repairers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-3092.00",
+      "Title": "Recreational Vehicle Service Technicians",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-3093.00",
+      "Title": "Tire Repairers and Changers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9011.00",
+      "Title": "Mechanical Door Repairers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9012.00",
+      "Title": "Control and Valve Installers and Repairers, Except Mechanical Door",
+      "Job Zone": "3",
+      "Date": "07/2017",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9021.00",
+      "Title": "Heating, Air Conditioning, and Refrigeration Mechanics and Installers",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9031.00",
+      "Title": "Home Appliance Repairers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9041.00",
+      "Title": "Industrial Machinery Mechanics",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9043.00",
+      "Title": "Maintenance Workers, Machinery",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9044.00",
+      "Title": "Millwrights",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9045.00",
+      "Title": "Refractory Materials Repairers, Except Brickmasons",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9051.00",
+      "Title": "Electrical Power-Line Installers and Repairers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9052.00",
+      "Title": "Telecommunications Line Installers and Repairers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9061.00",
+      "Title": "Camera and Photographic Equipment Repairers",
+      "Job Zone": "3",
+      "Date": "07/2015",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9062.00",
+      "Title": "Medical Equipment Repairers",
+      "Job Zone": "3",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9063.00",
+      "Title": "Musical Instrument Repairers and Tuners",
+      "Job Zone": "3",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9064.00",
+      "Title": "Watch and Clock Repairers",
+      "Job Zone": "3",
+      "Date": "08/2018",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9071.00",
+      "Title": "Maintenance and Repair Workers, General",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9081.00",
+      "Title": "Wind Turbine Service Technicians",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9091.00",
+      "Title": "Coin, Vending, and Amusement Machine Servicers and Repairers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9092.00",
+      "Title": "Commercial Divers",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9094.00",
+      "Title": "Locksmiths and Safe Repairers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9095.00",
+      "Title": "Manufactured Building and Mobile Home Installers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9096.00",
+      "Title": "Riggers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9097.00",
+      "Title": "Signal and Track Switch Repairers",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9098.00",
+      "Title": "Helpers--Installation, Maintenance, and Repair Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "49-9099.01",
+      "Title": "Geothermal Technicians",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-1011.00",
+      "Title": "First-Line Supervisors of Production and Operating Workers",
+      "Job Zone": "3",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-2011.00",
+      "Title": "Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-2021.00",
+      "Title": "Coil Winders, Tapers, and Finishers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-2022.00",
+      "Title": "Electrical and Electronic Equipment Assemblers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-2023.00",
+      "Title": "Electromechanical Equipment Assemblers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-2031.00",
+      "Title": "Engine and Other Machine Assemblers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-2041.00",
+      "Title": "Structural Metal Fabricators and Fitters",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-2051.00",
+      "Title": "Fiberglass Laminators and Fabricators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-2061.00",
+      "Title": "Timing Device Assemblers and Adjusters",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-2092.00",
+      "Title": "Team Assemblers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-3011.00",
+      "Title": "Bakers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-3021.00",
+      "Title": "Butchers and Meat Cutters",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-3022.00",
+      "Title": "Meat, Poultry, and Fish Cutters and Trimmers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-3023.00",
+      "Title": "Slaughterers and Meat Packers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-3091.00",
+      "Title": "Food and Tobacco Roasting, Baking, and Drying Machine Operators and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-3092.00",
+      "Title": "Food Batchmakers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-3093.00",
+      "Title": "Food Cooking Machine Operators and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4021.00",
+      "Title": "Extruding and Drawing Machine Setters, Operators, and Tenders, Metal and Plastic",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4022.00",
+      "Title": "Forging Machine Setters, Operators, and Tenders, Metal and Plastic",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4023.00",
+      "Title": "Rolling Machine Setters, Operators, and Tenders, Metal and Plastic",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4031.00",
+      "Title": "Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Metal and Plastic",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4032.00",
+      "Title": "Drilling and Boring Machine Tool Setters, Operators, and Tenders, Metal and Plastic",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4033.00",
+      "Title": "Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Operators, and Tenders, Metal and Plastic",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4034.00",
+      "Title": "Lathe and Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4035.00",
+      "Title": "Milling and Planing Machine Setters, Operators, and Tenders, Metal and Plastic",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4041.00",
+      "Title": "Machinists",
+      "Job Zone": "3",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4051.00",
+      "Title": "Metal-Refining Furnace Operators and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4052.00",
+      "Title": "Pourers and Casters, Metal",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4061.00",
+      "Title": "Model Makers, Metal and Plastic",
+      "Job Zone": "3",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4062.00",
+      "Title": "Patternmakers, Metal and Plastic",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4071.00",
+      "Title": "Foundry Mold and Coremakers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4072.00",
+      "Title": "Molding, Coremaking, and Casting Machine Setters, Operators, and Tenders, Metal and Plastic",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4081.00",
+      "Title": "Multiple Machine Tool Setters, Operators, and Tenders, Metal and Plastic",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4111.00",
+      "Title": "Tool and Die Makers",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4121.00",
+      "Title": "Welders, Cutters, Solderers, and Brazers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4122.00",
+      "Title": "Welding, Soldering, and Brazing Machine Setters, Operators, and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4191.00",
+      "Title": "Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4192.00",
+      "Title": "Layout Workers, Metal and Plastic",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4193.00",
+      "Title": "Plating Machine Setters, Operators, and Tenders, Metal and Plastic",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-4194.00",
+      "Title": "Tool Grinders, Filers, and Sharpeners",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-5111.00",
+      "Title": "Prepress Technicians and Workers",
+      "Job Zone": "3",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-5112.00",
+      "Title": "Printing Press Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-5113.00",
+      "Title": "Print Binding and Finishing Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-6011.00",
+      "Title": "Laundry and Dry-Cleaning Workers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-6021.00",
+      "Title": "Pressers, Textile, Garment, and Related Materials",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-6031.00",
+      "Title": "Sewing Machine Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-6041.00",
+      "Title": "Shoe and Leather Workers and Repairers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-6042.00",
+      "Title": "Shoe Machine Operators and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-6051.00",
+      "Title": "Sewers, Hand",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-6052.00",
+      "Title": "Tailors, Dressmakers, and Custom Sewers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-6061.00",
+      "Title": "Textile Bleaching and Dyeing Machine Operators and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-6062.00",
+      "Title": "Textile Cutting Machine Setters, Operators, and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-6063.00",
+      "Title": "Textile Knitting and Weaving Machine Setters, Operators, and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-6064.00",
+      "Title": "Textile Winding, Twisting, and Drawing Out Machine Setters, Operators, and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-6091.00",
+      "Title": "Extruding and Forming Machine Setters, Operators, and Tenders, Synthetic and Glass Fibers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-6092.00",
+      "Title": "Fabric and Apparel Patternmakers",
+      "Job Zone": "3",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-6093.00",
+      "Title": "Upholsterers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-7011.00",
+      "Title": "Cabinetmakers and Bench Carpenters",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-7021.00",
+      "Title": "Furniture Finishers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-7031.00",
+      "Title": "Model Makers, Wood",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-7032.00",
+      "Title": "Patternmakers, Wood",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-7041.00",
+      "Title": "Sawing Machine Setters, Operators, and Tenders, Wood",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-7042.00",
+      "Title": "Woodworking Machine Setters, Operators, and Tenders, Except Sawing",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-8011.00",
+      "Title": "Nuclear Power Reactor Operators",
+      "Job Zone": "3",
+      "Date": "07/2014",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-8012.00",
+      "Title": "Power Distributors and Dispatchers",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-8013.00",
+      "Title": "Power Plant Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-8013.03",
+      "Title": "Biomass Plant Technicians",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-8013.04",
+      "Title": "Hydroelectric Plant Technicians",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-8021.00",
+      "Title": "Stationary Engineers and Boiler Operators",
+      "Job Zone": "3",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-8031.00",
+      "Title": "Water and Wastewater Treatment Plant and System Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-8091.00",
+      "Title": "Chemical Plant and System Operators",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-8092.00",
+      "Title": "Gas Plant Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-8093.00",
+      "Title": "Petroleum Pump System Operators, Refinery Operators, and Gaugers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-8099.01",
+      "Title": "Biofuels Processing Technicians",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9011.00",
+      "Title": "Chemical Equipment Operators and Tenders",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9012.00",
+      "Title": "Separating, Filtering, Clarifying, Precipitating, and Still Machine Setters, Operators, and Tenders",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9021.00",
+      "Title": "Crushing, Grinding, and Polishing Machine Setters, Operators, and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9022.00",
+      "Title": "Grinding and Polishing Workers, Hand",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9023.00",
+      "Title": "Mixing and Blending Machine Setters, Operators, and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9031.00",
+      "Title": "Cutters and Trimmers, Hand",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9032.00",
+      "Title": "Cutting and Slicing Machine Setters, Operators, and Tenders",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9041.00",
+      "Title": "Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9051.00",
+      "Title": "Furnace, Kiln, Oven, Drier, and Kettle Operators and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9061.00",
+      "Title": "Inspectors, Testers, Sorters, Samplers, and Weighers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9071.00",
+      "Title": "Jewelers and Precious Stone and Metal Workers",
+      "Job Zone": "3",
+      "Date": "08/2025",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9071.06",
+      "Title": "Gem and Diamond Workers",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9081.00",
+      "Title": "Dental Laboratory Technicians",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9082.00",
+      "Title": "Medical Appliance Technicians",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9083.00",
+      "Title": "Ophthalmic Laboratory Technicians",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9111.00",
+      "Title": "Packaging and Filling Machine Operators and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9123.00",
+      "Title": "Painting, Coating, and Decorating Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9124.00",
+      "Title": "Coating, Painting, and Spraying Machine Setters, Operators, and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9141.00",
+      "Title": "Semiconductor Processing Technicians",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9151.00",
+      "Title": "Photographic Process Workers and Processing Machine Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9161.00",
+      "Title": "Computer Numerically Controlled Tool Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9162.00",
+      "Title": "Computer Numerically Controlled Tool Programmers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9191.00",
+      "Title": "Adhesive Bonding Machine Operators and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9192.00",
+      "Title": "Cleaning, Washing, and Metal Pickling Equipment Operators and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9193.00",
+      "Title": "Cooling and Freezing Equipment Operators and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9194.00",
+      "Title": "Etchers and Engravers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9195.00",
+      "Title": "Molders, Shapers, and Casters, Except Metal and Plastic",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9195.03",
+      "Title": "Stone Cutters and Carvers, Manufacturing",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9195.04",
+      "Title": "Glass Blowers, Molders, Benders, and Finishers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9195.05",
+      "Title": "Potters, Manufacturing",
+      "Job Zone": "3",
+      "Date": "08/2020",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9196.00",
+      "Title": "Paper Goods Machine Setters, Operators, and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9197.00",
+      "Title": "Tire Builders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "51-9198.00",
+      "Title": "Helpers--Production Workers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-1041.00",
+      "Title": "Aircraft Cargo Handling Supervisors",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-1042.00",
+      "Title": "First-Line Supervisors of Helpers, Laborers, and Material Movers, Hand",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-1042.01",
+      "Title": "Recycling Coordinators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-1043.00",
+      "Title": "First-Line Supervisors of Material-Moving Machine and Vehicle Operators",
+      "Job Zone": "3",
+      "Date": "08/2023",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-1044.00",
+      "Title": "First-Line Supervisors of Passenger Attendants",
+      "Job Zone": "3",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-2011.00",
+      "Title": "Airline Pilots, Copilots, and Flight Engineers",
+      "Job Zone": "4",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-2012.00",
+      "Title": "Commercial Pilots",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-2021.00",
+      "Title": "Air Traffic Controllers",
+      "Job Zone": "3",
+      "Date": "07/2014",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-2022.00",
+      "Title": "Airfield Operations Specialists",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-2031.00",
+      "Title": "Flight Attendants",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-3011.00",
+      "Title": "Ambulance Drivers and Attendants, Except Emergency Medical Technicians",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-3031.00",
+      "Title": "Driver/Sales Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-3032.00",
+      "Title": "Heavy and Tractor-Trailer Truck Drivers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-3033.00",
+      "Title": "Light Truck Drivers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-3051.00",
+      "Title": "Bus Drivers, School",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-3052.00",
+      "Title": "Bus Drivers, Transit and Intercity",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-3053.00",
+      "Title": "Shuttle Drivers and Chauffeurs",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-3054.00",
+      "Title": "Taxi Drivers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-4011.00",
+      "Title": "Locomotive Engineers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-4013.00",
+      "Title": "Rail Yard Engineers, Dinkey Operators, and Hostlers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-4022.00",
+      "Title": "Railroad Brake, Signal, and Switch Operators and Locomotive Firers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-4031.00",
+      "Title": "Railroad Conductors and Yardmasters",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-4041.00",
+      "Title": "Subway and Streetcar Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-5011.00",
+      "Title": "Sailors and Marine Oilers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-5021.00",
+      "Title": "Captains, Mates, and Pilots of Water Vessels",
+      "Job Zone": "3",
+      "Date": "08/2022",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-5022.00",
+      "Title": "Motorboat Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-5031.00",
+      "Title": "Ship Engineers",
+      "Job Zone": "3",
+      "Date": "08/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-6011.00",
+      "Title": "Bridge and Lock Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-6021.00",
+      "Title": "Parking Attendants",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-6031.00",
+      "Title": "Automotive and Watercraft Service Attendants",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-6032.00",
+      "Title": "Aircraft Service Attendants",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-6041.00",
+      "Title": "Traffic Technicians",
+      "Job Zone": "3",
+      "Date": "07/2016",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-6051.00",
+      "Title": "Transportation Inspectors",
+      "Job Zone": "4",
+      "Date": "11/2024",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-6051.01",
+      "Title": "Aviation Inspectors",
+      "Job Zone": "3",
+      "Date": "08/2021",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-6051.07",
+      "Title": "Transportation Vehicle, Equipment and Systems Inspectors, Except Aviation",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-6061.00",
+      "Title": "Passenger Attendants",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-7011.00",
+      "Title": "Conveyor Operators and Tenders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-7021.00",
+      "Title": "Crane and Tower Operators",
+      "Job Zone": "3",
+      "Date": "07/2015",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-7031.00",
+      "Title": "Dredge Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-7041.00",
+      "Title": "Hoist and Winch Operators",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-7051.00",
+      "Title": "Industrial Truck and Tractor Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-7061.00",
+      "Title": "Cleaners of Vehicles and Equipment",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-7062.00",
+      "Title": "Laborers and Freight, Stock, and Material Movers, Hand",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-7062.04",
+      "Title": "Recycling and Reclamation Workers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-7063.00",
+      "Title": "Machine Feeders and Offbearers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-7064.00",
+      "Title": "Packers and Packagers, Hand",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-7065.00",
+      "Title": "Stockers and Order Fillers",
+      "Job Zone": "2",
+      "Date": "08/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-7071.00",
+      "Title": "Gas Compressor and Gas Pumping Station Operators",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-7072.00",
+      "Title": "Pump Operators, Except Wellhead Pumpers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-7073.00",
+      "Title": "Wellhead Pumpers",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-7081.00",
+      "Title": "Refuse and Recyclable Material Collectors",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    },
+    {
+      "O*NET-SOC Code": "53-7121.00",
+      "Title": "Tank Car, Truck, and Ship Loaders",
+      "Job Zone": "2",
+      "Date": "02/2026",
+      "Domain Source": "Analyst"
+    }
+  ],
+  "zones": [
+    {
+      "Job Zone": "2",
+      "Name": "Job Zone 1-2: Very Little to Some Preparation Needed",
+      "Experience": "Some occupations may need little or no previous experience; others require several months to a year of experience. For example, landscaping and groundskeeping workers might require very little training or previous experience, while agricultural equipment operators can benefit from on-the job training.",
+      "Education": "Usually requires a high school diploma or GED, though some occupations may not.",
+      "Job Training": "Ranges from a few days to one year of on-the-job training.",
+      "Examples": "These occupations involve following instructions and often involve using your knowledge and skills to help others. Examples include dishwashers, landscaping and groundskeeping workers, counter and rental clerks, dental laboratory technicians, and security guards.",
+      "SVP Range": "(Below 6.0)"
+    },
+    {
+      "Job Zone": "3",
+      "Name": "Job Zone Three: Medium Preparation Needed",
+      "Experience": "Previous work-related skill, knowledge, or experience is required for these occupations. For example, an electrician must have completed three or four years of apprenticeship or several years of vocational training, and often must have passed a licensing exam, in order to perform the job.",
+      "Education": "Most occupations in this zone require training in vocational schools, related on-the-job experience, or an associate's degree.",
+      "Job Training": "Employees in these occupations usually need one or two years of training involving both on-the-job experience and informal training with experienced workers. A recognized apprenticeship program may be associated with these occupations.",
+      "Examples": "These occupations usually involve using communication and organizational skills to coordinate, supervise, manage, or train others to accomplish goals. Examples include hydroelectric production managers, desktop publishers, electricians, agricultural technicians, barbers, court reporters and simultaneous captioners, and medical assistants.",
+      "SVP Range": "(6.0 to < 7.0)"
+    },
+    {
+      "Job Zone": "4",
+      "Name": "Job Zone Four: Considerable Preparation Needed",
+      "Experience": "A considerable amount of work-related skill, knowledge, or experience is needed for these occupations. For example, an accountant must complete four years of college and work for several years in accounting to be considered qualified.",
+      "Education": "Most of these occupations require a four-year bachelor's degree, but some do not.",
+      "Job Training": "Employees in these occupations usually need several years of work-related experience, on-the-job training, and/or vocational training.",
+      "Examples": "Many of these occupations involve coordinating, supervising, managing, or training others. Examples include real estate brokers, sales managers, database administrators, graphic designers, conservation scientists, art directors, and cost estimators.",
+      "SVP Range": "(7.0 to < 8.0)"
+    },
+    {
+      "Job Zone": "5",
+      "Name": "Job Zone Five: Extensive Preparation Needed",
+      "Experience": "Extensive skill, knowledge, and experience are needed for these occupations. Many require more than five years of experience. For example, surgeons must complete four years of college and an additional five to seven years of specialized medical training to be able to do their job.",
+      "Education": "Most of these occupations require graduate school. For example, they may require a master's degree, and some require a Ph.D., M.D., or J.D. (law degree).",
+      "Job Training": "Employees may need some on-the-job training, but most of these occupations assume that the person will already have the required skills, knowledge, work-related experience, and/or training.",
+      "Examples": "These occupations often involve coordinating, training, supervising, or managing the activities of others to accomplish goals. Very advanced communication and organizational skills are required. Examples include pharmacists, lawyers, astronomers, biologists, clergy, physician assistants, and veterinarians.",
+      "SVP Range": "(8.0 and above)"
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import json
 import math
 import pandas as pd
 from core import data_access as d
+from core import preparation
 
 def skill_reference():
     return d.frame('''SELECT DISTINCT "Element ID" AS id,"Element Name" AS skill FROM raw_essential_skills
@@ -78,6 +79,24 @@ def recommend(profile,m,weight=0.8):
     out=out.merge(exposure,left_on='code',right_index=True,how='left')
     return out.dropna(subset=['comparison_score']).sort_values(['comparison_score','code'],ascending=[False,True]).reset_index(drop=True)
 
+
+def comparison_groups(profile,m,weight=0.8):
+    """Rank only rows with the same evidence basis; retain unavailable-wage rows separately."""
+    result=recommend(profile,m,weight)
+    combined=profile['desired_income']>0 and weight<1
+    if combined:
+        ranked=result[result.wage_preference.notna()].copy()
+        supplementary=result[result.wage_preference.isna()].copy()
+        basis='Skills + wage'
+    else:
+        ranked=result.copy()
+        supplementary=result.iloc[:0].copy()
+        basis='Skills only'
+    ranked['score_basis']=basis
+    supplementary['score_basis']='Skills only (wage unavailable)'
+    return ranked.reset_index(drop=True),supplementary.reset_index(drop=True),basis
+
+
 def gaps(profile,target,m):
     if target not in m.index:
         return pd.DataFrame(columns=['id','skill','importance','self_rating','priority'])
@@ -116,6 +135,7 @@ def report(profile,target,m,scenario=None,completed=None):
     record=wage_catalog();record=record[record.code==target]
     title=record.iloc[0].occupation if len(record) else target
     return {'report_version':1,'profile':profile,'target':{'code':target,'title':title},
+       'preparation_references':preparation.profiles(target),
        'skill_priorities':json.loads(g.head(10).to_json(orient='records')),
        'scenario':scenario,'completed_tasks':completed or {},
        'methodology':{'geographic_scope':'U.S. occupational and labour-market data; published territories where available. All monetary amounts are USD. No Hong Kong or mainland China wage estimates.',

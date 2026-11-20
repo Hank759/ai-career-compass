@@ -70,6 +70,8 @@ def dashboard(soc,version):
         st.caption('The seven-character SOC base code links to one or more O*NET specializations. BLS wages above refer to the parent occupation, not an individual specialization.')
         code=choose('Profile',profiles,'onet_profile')
         st.write(profiles.set_index('code').loc[code,'description'])
+        from core import preparation
+        preparation.panel(soc,code)
         skill=load('skills',version,code)
         st.subheader('Skill importance')
         st.caption('O*NET importance describes how important a skill is to this occupation. It is not your proficiency, a hiring threshold or an AI exposure score.')
@@ -116,6 +118,10 @@ def exposure_panel(soc,version,context='Career Dashboard'):
         st.info(f'No exact-code exposure estimate is available for SOC {soc}. Missing data is not zero exposure, and no value is inferred from a similar job title.')
     if context in ('Regional Analysis','Industry Analysis'):
         st.caption('Occupation-level reference only: these values do not change by region or industry. They are not regional AIGE or industry AIIE estimates.')
+    with st.expander('How to read these exposure indices'):
+        st.write('Compare occupations within the same metric. A higher index indicates greater exposure in that source measure; it does not establish that a worker will lose a job or that one AI technology is more dangerous than another.')
+        st.write('These datasets link AI applications with occupational abilities. The app does not have a validated occupation-specific task contribution breakdown, so it cannot attribute the displayed score to individual tasks. Skill importance below is a separate O*NET measure.')
+        st.markdown('[Original datasets and methodology — Felten, Raj and Seamans](https://github.com/AIOE-Data/AIOE)')
     with st.expander('Exposure source details'):
         st.dataframe(scores,hide_index=True,alt='Original AI exposure indices and source files for the selected SOC occupation')
 

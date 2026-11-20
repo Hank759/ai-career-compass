@@ -1,5 +1,5 @@
 {
-  "tests_passed": 58,
+  "tests_passed": 64,
   "runtime_pages_ready": [
     "Home",
     "Personal Profile",
@@ -14,7 +14,7 @@
     "Data & Methodology"
   ],
   "database_restoration": "sha256 verified",
-  "cloud_build": "Previous deployed release independently verified; current scope/demo update awaiting remote refresh",
+  "cloud_build": "Prior release verified; usability update undergoing remote verification",
   "docker_build": "not run; Docker unavailable",
   "public_url": "https://ai-career-compass-mhexwfwuvmco9rkf6fjltk.streamlit.app/"
 }

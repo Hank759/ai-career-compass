@@ -4,9 +4,10 @@ from core import planning as p
 
 
 def validate_workspace(value):
-    if not isinstance(value,dict) or value.get('kind')!='career_workspace' or value.get('version')!=1:
+    if not isinstance(value,dict) or value.get('kind')!='career_workspace' or value.get('version') not in (1,2):
         raise ValueError('Unsupported workspace file')
     fields={'kind','version','profile','target','scenario','completed_tasks','plan_horizons','skill_weight'}
+    if value['version']==2:fields.add('scenario_comparisons')
     if set(value)!=fields:
         raise ValueError('Workspace has missing or unknown fields')
     profile=p.validate_profile(value['profile'])
@@ -46,12 +47,30 @@ def validate_workspace(value):
         # Recompute from user inputs. Never trust imported calculated totals.
         scenario={'target':scenario['target'],'current_income':profile['annual_income'],
                   'target_income':income,'earnings_fraction':fraction,'weekly_hours':profile['weekly_hours'],'result':result}
-    return {'kind':'career_workspace','version':1,'profile':profile,'target':target,
+    result={'kind':'career_workspace','version':value['version'],'profile':profile,'target':target,
             'scenario':scenario,'completed_tasks':done.copy(),'plan_horizons':horizons.copy(),'skill_weight':float(weight)}
+    if value['version']==2:
+        items=value['scenario_comparisons']
+        if not isinstance(items,list) or len(items)>5:raise ValueError('Keep at most five comparison scenarios')
+        normalized=[];names=set()
+        for item in items:
+            if not isinstance(item,dict) or set(item)!={'name','scenario'}:raise ValueError('Invalid comparison scenario')
+            name=item['name']
+            if not isinstance(name,str) or not name.strip() or len(name)>60 or name.strip().casefold() in names:
+                raise ValueError('Comparison names must be unique and 1–60 characters')
+            names.add(name.strip().casefold())
+            if item['scenario'] is None:raise ValueError('A comparison must contain a saved scenario')
+            old={k:v for k,v in value.items() if k!='scenario_comparisons'}
+            old.update(version=1,scenario=item['scenario'])
+            checked=validate_workspace(old)['scenario']
+            normalized.append({'name':name.strip(),'scenario':checked})
+        result['scenario_comparisons']=normalized
+    return result
 
 
 def export_workspace(state):
-    return validate_workspace({'kind':'career_workspace','version':1,'profile':state.get('profile',{}),
+    return validate_workspace({'kind':'career_workspace','version':2,'profile':state.get('profile',{}),
+        'scenario_comparisons':state.get('scenario_comparisons',[]),
         'target':state.get('planning_target'),'scenario':state.get('saved_scenario'),
         'completed_tasks':state.get('plan_done',{}),'plan_horizons':state.get('plan_horizons',{}),
         'skill_weight':state.get('recommendation_weight',.8)})
@@ -64,6 +83,7 @@ def restore_workspace(state,value):
             del state[key]
     state.pop('report_prepared_target',None)
     state.pop('plan_unavailable_target',None)
+    state['scenario_comparisons']=clean.get('scenario_comparisons',[])
     state['profile']=clean['profile']
     state['planning_target']=clean['target']
     state['plan_done']=clean['completed_tasks']

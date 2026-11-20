@@ -19,6 +19,7 @@ def annual(soc,version):
 def save_profile(profile):
     p.validate_profile(profile)
     if profile!=st.session_state.get('profile'):
+        st.session_state['scenario_comparisons']=[]
         st.session_state.pop('saved_scenario',None)
         st.session_state.pop('report_prepared_target',None)
         st.session_state.pop('plan_unavailable_target',None)
@@ -106,7 +107,7 @@ def profile_page(version):
         bundle=ws.export_workspace(st.session_state)
         st.download_button('Back up complete workspace',json.dumps(bundle,ensure_ascii=False,indent=2,allow_nan=False).encode('utf-8'),
                            'career_workspace.json','application/json',key='export_workspace')
-        st.caption('Complete backups include your profile, selected target, saved simulation, learning progress, plan duration and recommendation weight. Import this file above to resume in a new session.')
+        st.caption('Complete backups include your profile, selected target, saved simulation, scenario comparisons, learning progress, plan duration and recommendation weight. Import this file above to resume in a new session.')
         st.download_button('Export profile',json.dumps(st.session_state.profile,ensure_ascii=False,indent=2).encode('utf-8'),
                            'career_profile.json','application/json',key='export_profile')
 
@@ -145,7 +146,14 @@ def recommendations(profile,m):
     display=top.copy()
     for col in ['comparison_score','skill_alignment','assessment_coverage','wage_preference']:
         display[col]=(display[col]*100).round(1)
-    st.dataframe(display,hide_index=True,alt='Career comparisons with heuristic scores, assessed-skill coverage and national wage benchmarks')
+    st.dataframe(display,hide_index=True,column_config={
+        'code':'SOC code','occupation':'Occupation','comparison_score':st.column_config.NumberColumn('Comparison score / 100',format='%.1f'),
+        'skill_alignment':st.column_config.NumberColumn('Assessed-skill alignment / 100',format='%.1f'),
+        'assessment_coverage':st.column_config.NumberColumn('Skills assessed (%)',format='%.1f'),
+        'wage_preference':st.column_config.NumberColumn('Wage preference / 100',format='%.1f'),
+        'median_wage':st.column_config.NumberColumn('National median annual wage (USD)',format='$%.0f'),
+        'employment':'Published employment','exposure_ai':'General AI exposure index','exposure_language':'Language-model index','exposure_image':'Image-generation index'},
+        alt='Career comparisons with heuristic scores, assessed-skill coverage and national wage benchmarks')
     st.caption('Exposure columns show raw source indices (general AI, language model and image generation), not percentages; blanks mean unavailable. Exposure is displayed for comparison, not used as a job-loss penalty in the ranking.')
     st.caption('Score and coverage columns are on a 0–100 scale, not probabilities. Low assessment coverage limits the comparison. Occupations without usable skill data are excluded; all wage records remain available in Career Dashboard.')
     if top.empty:
@@ -157,6 +165,17 @@ def recommendations(profile,m):
         selections=pd.concat([top,prior[prior.code==previous]],ignore_index=True)
         st.caption('Your previously selected target remains selectable even if it is outside the current shortlist.')
     target=target_selector(selections,'recommendation_target')
+    matched=result[result.code==target]
+    if not matched.empty:
+        row=matched.iloc[0]
+        with st.container(border=True):
+            st.subheader('Why this comparison?')
+            st.write(f'Assessed-skill alignment: {row.skill_alignment*100:.1f}/100. Skill assessment coverage: {row.assessment_coverage*100:.1f}%.')
+            if pd.notna(row.wage_preference):
+                st.write(f'Comparison score {row.comparison_score*100:.1f}/100 = {weight:.0%} skill alignment + {1-weight:.0%} wage preference. The wage term is capped at the stated goal.')
+            else:
+                st.write('Only the assessed-skill term is available: no wage goal was set or the wage estimate is missing. This row uses a different evidence basis from rows with both terms.')
+            st.caption('These are rule-based comparisons. A high score does not establish qualifications, licensing eligibility or hiring prospects.')
     from core.data_ui import exposure_panel
     exposure_panel(target,d.fingerprint(),'Career Recommendations')
     gap=p.gaps(profile,target,m)
@@ -206,8 +225,36 @@ def simulator(profile,target,cat):
         for duration_factor in [.75,1,1.25]:
             v=p.simulate(saved['current_income'],saved['target_income']*income_factor,r['training_months']*duration_factor,r['training_cost'],saved['earnings_fraction'],saved['weekly_hours'])
             rows.append({'income_assumption_factor':income_factor,'duration_factor':duration_factor,**v})
+    scenario_comparison(profile,saved)
     st.subheader('Sensitivity to your assumptions')
     st.dataframe(pd.DataFrame(rows),hide_index=True,alt='Nine what-if combinations of income and transition duration assumptions')
+
+def scenario_comparison(profile,saved):
+    from core.scenario_tools import add_comparison,comparison_rows
+    items=st.session_state.setdefault('scenario_comparisons',[])
+    st.subheader('Compare your saved scenarios')
+    st.caption('Save the currently calculated result, not unsaved form edits. Up to five named scenarios can be compared; all use the current profile baseline. Comparisons are included in complete workspace backups.')
+    with st.form('comparison_form'):
+        name=st.text_input('Scenario label',max_chars=60,placeholder='For example: part-time retraining',key='comparison_label')
+        add=st.form_submit_button('Add calculated scenario to comparison')
+    if add:
+        try:
+            st.session_state['scenario_comparisons']=add_comparison(items,name,saved,profile)
+            st.success('Scenario added to comparison.')
+        except ValueError as exc:st.warning(str(exc))
+    items=st.session_state['scenario_comparisons']
+    if not items:return
+    table=pd.DataFrame(comparison_rows(items))
+    st.dataframe(table,hide_index=True,alt='Named transition scenarios with assumed income, costs and simple payback')
+    st.caption('Blank payback means assumed income does not increase. No missing payback is converted to zero. This is a what-if comparison, not a forecast.')
+    st.download_button('Download scenario comparison',table.to_csv(index=False).encode('utf-8-sig'),'scenario_comparison.csv','text/csv',key='download_scenario_comparison')
+    remove=st.selectbox('Scenario to remove',[x['name'] for x in items],key='comparison_remove_name')
+    st.button('Remove selected scenario',key='comparison_remove',on_click=remove_comparison,args=(remove,))
+
+
+def remove_comparison(name):
+    st.session_state['scenario_comparisons']=[x for x in st.session_state.get('scenario_comparisons',[]) if x['name']!=name]
+
 
 def development(profile,target,m):
     g=p.gaps(profile,target,m)
@@ -247,6 +294,7 @@ def personal_report(profile,target,m):
     payload=p.report(profile,target,m,saved,done)
     from core.data_ui import exposure_panel
     exposure_panel(target,d.fingerprint(),'Personal Report')
+    payload['scenario_comparisons']=[item for item in st.session_state.get('scenario_comparisons',[]) if item['scenario']['target']==target]
     payload['target_exposure']=json.loads(d.exposure(target).to_json(orient='records'))
     payload['learning_plan']=learning.build_plan(p.gaps(profile,target,m),target,st.session_state.get('plan_horizons',{}).get(target,12),profile['weekly_hours'],done)
     weight=st.session_state.get('recommendation_weight',0.8)
@@ -266,7 +314,7 @@ def personal_report(profile,target,m):
            f'Learning hours per week: {profile["weekly_hours"]}','', '## Career history and interests',profile['history'],'','## Skill priorities']
     for r in payload['skill_priorities']:
         lines.append(f'- {r["skill"]}: importance {r["importance"]:.2f}; self-rating {r["self_rating"]}; priority {r["priority"]}')
-    lines+=['','## Target AI exposure (raw source indices)',json.dumps(payload['target_exposure'],ensure_ascii=False,indent=2),'','## Career comparison summary',json.dumps(payload['comparison_summary'],ensure_ascii=False,indent=2),f'Skill weight: {weight}','','## Scenario',json.dumps(saved,ensure_ascii=False,indent=2),'','## Learning plan and completion evidence',json.dumps(payload['learning_plan'],ensure_ascii=False,indent=2),'','## Completed learning tasks',json.dumps(payload['completed_tasks'],indent=2),'','## Methods and limitations']
+    lines+=['','## Target AI exposure (raw source indices)',json.dumps(payload['target_exposure'],ensure_ascii=False,indent=2),'','## Career comparison summary',json.dumps(payload['comparison_summary'],ensure_ascii=False,indent=2),f'Skill weight: {weight}','','## Scenario',json.dumps(saved,ensure_ascii=False,indent=2),'','## Saved comparison scenarios for this target',json.dumps(payload['scenario_comparisons'],ensure_ascii=False,indent=2),'','## Learning plan and completion evidence',json.dumps(payload['learning_plan'],ensure_ascii=False,indent=2),'','## Completed learning tasks',json.dumps(payload['completed_tasks'],indent=2),'','## Methods and limitations']
     lines += [f'- {k}: {v}' for k,v in payload['methodology'].items()]
     st.download_button('Download readable report (Markdown)','\n'.join(lines).encode('utf-8'),'career_report.md','text/markdown',key='download_report_md')
     st.session_state['report_prepared_target']=target

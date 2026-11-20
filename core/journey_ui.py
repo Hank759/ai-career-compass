@@ -29,6 +29,26 @@ def explore(soc):
     go('Career Dashboard')
 
 
+def start_example():
+    from core import workspace
+    from core.demo_workspace import example_workspace
+    current=st.session_state.get('profile')
+    if current and not st.session_state.get('confirm_demo_replace',False):return
+    if current and '_previous_workspace' not in st.session_state:
+        st.session_state['_previous_workspace']=workspace.export_workspace(st.session_state)
+    workspace.restore_workspace(st.session_state,example_workspace())
+    go('Career Recommendations')
+
+
+def restore_previous():
+    from core import workspace
+    previous=st.session_state.get('_previous_workspace')
+    if previous is not None:
+        workspace.restore_workspace(st.session_state,previous)
+        st.session_state.pop('_previous_workspace',None)
+    go('Home')
+
+
 def journey_state(state):
     profile=state.get('profile') or {}
     ready=len(profile.get('ratings',{}))>=3
@@ -88,6 +108,13 @@ def home():
             label='Create my profile' if not status['flags'][0] else 'Continue my plan'
             st.button(label,icon=':material/arrow_forward:',type='primary',width='stretch',key='home_plan',
                       on_click=go,args=(status['next_page'],))
+    with st.container(border=True):
+        st.subheader('See the full workflow with a fictional example')
+        st.write('Start an example session directly, without downloading or uploading a file. All sample income and skill ratings are invented; market references remain real data.')
+        has_profile=bool(st.session_state.get('profile'))
+        confirmed=st.checkbox('Replace this session with the fictional example. I have backed up my work.',key='confirm_demo_replace') if has_profile else True
+        st.button('Start guided example',key='start_guided_example',on_click=start_example,disabled=has_profile and not confirmed)
+        st.caption('If a workspace is already present, a temporary in-session copy is kept so you can return to it. This is not a permanent backup.')
     st.divider()
     st.subheader('My planning progress')
     st.progress(status['completed']/5,text=f'{status["completed"]}/5 preparation steps completed; not a measure of job readiness')
@@ -115,6 +142,11 @@ def home():
 
 
 def intro(page):
+    profile=st.session_state.get('profile') or {}
+    if profile.get('name')=='Example learner (fictional)' and profile.get('history','').startswith('Fictional demonstration'):
+        st.warning('Fictional example session: the learner inputs are invented. Use the workflow to explore; these are not your personal recommendations.')
+    if st.session_state.get('_previous_workspace'):
+        st.button('Return to my workspace',key='return_my_workspace',on_click=restore_previous)
     if page in HELP:
         stage,tip=HELP[page]
         st.caption(stage)

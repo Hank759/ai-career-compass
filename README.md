@@ -36,3 +36,7 @@ Exposure indices are not job-loss probabilities. Missing values are not zero. Ca
 
 Official deployment guide: https://docs.streamlit.io/deploy/streamlit-community-cloud
 Official access/sharing guide: https://docs.streamlit.io/deploy/streamlit-community-cloud/share-your-app
+
+## Usability update
+
+Home now offers Start guided example without file transfer. Replacing an existing session requires confirmation and keeps an in-session return copy; export a permanent backup first. Career comparisons explain their score basis. Transition Simulator supports up to five named comparison snapshots, CSV export and removal. Version-2 workspace backups include comparisons; version-1 backups still import. Updating a profile clears snapshots calculated for the old baseline.

@@ -57,6 +57,8 @@ def home():
     st.badge('Start with one question, not every feature',icon=':material/explore:',color='primary')
     st.title('AI Career Compass')
     st.subheader('Understand AI exposure. Find your next career step.')
+    st.badge('U.S. labour-market data · Currency: USD',color='blue')
+    st.caption('Includes U.S. states, the District of Columbia and territories where published. This version does not estimate Hong Kong or mainland China wages or job markets.')
     st.write('Explore an occupation or plan a transition around your skills. Choose one route below; every feature remains available in the sidebar.')
     try:
         cat,covered=overview(d.fingerprint())
@@ -102,6 +104,12 @@ def home():
         st.metric('Published BLS occupations',f'{len(cat):,}',border=True)
         st.metric('With a matching exposure index',f'{covered:,}',border=True)
         st.metric('Wage reference period','May 2025',border=True)
+    with st.expander('Try a fictional example before entering personal information'):
+        import json
+        from core.demo_workspace import example_workspace
+        st.write('Download the example, then open Personal Profile and import it. It contains invented learner inputs and no saved scenario. Your current profile is not changed by downloading.')
+        st.caption('Back up your own workspace before importing an example. The wage and exposure references remain real source data; the example income and skill ratings are fictional.')
+        st.download_button('Download fictional example workspace',json.dumps(example_workspace(),indent=2).encode('utf-8'),'fictional_example_workspace.json','application/json',key='download_example')
     with st.expander('First time here? How to read the results'):
         st.markdown('**What is exposure?** Three source indices describe general AI, language-model and image-generation exposure. They are not job-loss probabilities or a combined risk percentage.\n\n**What are the occupation numbers?** SOC codes identify occupations for data matching; they are not rankings.\n\n**Why are some values blank?** A value may be unpublished, suppressed or unmatched across classifications. Missing is not zero.\n\n**Can the comparison decide for me?** No. It applies transparent rules to your assessed skills and wage preference. Fewer assessments provide less evidence.')
 

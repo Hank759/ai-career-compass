@@ -1,0 +1,14 @@
+AI Career Compass: first-time usability task
+
+Use a private browser window and the public app. Ask a classmate who did not build the app to attempt this without verbal guidance. Do not enter real personal details for this exercise.
+
+Scenario: A fictional software developer wants to understand occupational AI exposure and compare a possible move into computer and information systems management. The fictional profile assumes USD 60,000 current income, USD 90,000 desired income and five weekly learning hours. These are invented examples, not market observations or a career recommendation.
+
+1. From Home, explore Chief Executives. Find all three exposure indices and explain why they are not job-loss percentages.
+2. Return Home. Expand Try a fictional example and download the workspace. Open Personal Profile, upload it and select Import profile. Confirm the learner is explicitly labelled fictional.
+3. Open Career Recommendations. Locate the selected target 11-3021. Explain what affects the comparison score and what assessment coverage means.
+4. In Transition Simulator enter these assumptions: USD 90,000 post-transition income, six months, USD 1,200 fees, 100% earnings retained. Calculate and save. Expected arithmetic: USD 1,200 transition cost, USD 2,500 monthly income increase, 0.48 months simple payback after transition. These are arithmetic checks, not forecasts.
+5. Prepare a 12-week learning plan, check one task and download the report.
+6. Back up the complete workspace. In a new session, import it and confirm the target, scenario and completed task return.
+
+Record for each step: completed without help (yes/no), approximate time, confusing label, error encountered and one suggested improvement. Note whether the U.S./USD scope was noticed. Do not treat a working automated test as proof a first-time user understands the app.

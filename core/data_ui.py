@@ -99,6 +99,9 @@ def exposure_panel(soc,version,context='Career Dashboard'):
         st.dataframe(scores,hide_index=True,alt='Original AI exposure indices and source files for the selected SOC occupation')
 
 def methodology(version):
+    st.subheader('Geographic scope and currency')
+    st.info('This version uses U.S. occupational and labour-market data, including territories where the source publishes them. All wage and scenario amounts are USD. It is not a Hong Kong or mainland China labour-market model.')
+    st.write('BLS supplies employment and wages; O*NET supplies occupational skills; Felten supplies exposure indices linked through U.S. SOC classifications. BEA regional price data is retained in the local research archive but is not currently used to adjust displayed wages.')
     st.subheader('Source selection')
     policy=pd.DataFrame([{'View':k,'Source':v[1]} for k,v in data.TABLES.items()])
     st.dataframe(policy,hide_index=True,alt='Source file selected for each application view')

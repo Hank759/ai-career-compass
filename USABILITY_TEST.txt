@@ -7,8 +7,11 @@ Scenario: A fictional software developer wants to understand occupational AI exp
 1. From Home, explore Chief Executives. Find all three exposure indices and explain why they are not job-loss percentages.
 2. Return Home. Select Start guided example. No file transfer is needed; a fresh session opens the example directly. Confirm the learner is explicitly labelled fictional.
 3. Open Career Recommendations. Locate the selected target 11-3021. Explain what affects the comparison score and what assessment coverage means.
+   Open Compare careers side by side and test sensitivity. Compare two or three careers and run the sensitivity check. Explain why the tested rank range is not a hiring probability. Confirm that comparison choices do not silently change the target for the plan.
 4. In Transition Simulator enter these assumptions: USD 90,000 post-transition income, six months, USD 1,200 fees, 100% earnings retained. Calculate and save. Expected arithmetic: USD 1,200 transition cost, USD 2,500 monthly income increase, 0.48 months simple payback after transition. These are arithmetic checks, not forecasts.
 5. Prepare a 12-week learning plan, check one task and download the report.
 6. Back up the complete workspace. In a new session, import it and confirm the target, scenario and completed task return.
 
 Record for each step: completed without help (yes/no), approximate time, confusing label, error encountered and one suggested improvement. Note whether the U.S./USD scope was noticed. Do not treat a working automated test as proof a first-time user understands the app.
+
+Submission checks: website access and source-code access are separate. Confirm the teacher can open both submitted links without relying on the owner's signed-in browser. Reports and workspace backups contain personal inputs; use the fictional example for demonstrations. A printable HTML report can be saved as PDF, but it does not restore the interactive workspace.

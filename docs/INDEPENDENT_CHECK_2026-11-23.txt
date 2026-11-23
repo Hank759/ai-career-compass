@@ -1,0 +1,46 @@
+AI Career Compass 4.6 - independent technical check
+Date: 23 November 2026 (Asia/Hong_Kong)
+Application commit checked: 22680e99d1242acae9404edf8767a0dc2e3120f4
+
+Completed checks
+- Full regression suite: 101 passed in 60.77 seconds.
+- Isolated running server: all eleven application pages ready. Career comparison,
+  sensitivity, saved simulation and report workflow passed. No server warnings
+  or tracebacks appeared in the captured check log.
+- Independent anonymous browser: public app opened without a login; English home,
+  Chief Executives exposure values (1.334, 1.309, 1.310), education reference,
+  fictional example, comparison table, sensitivity control/results/download
+  controls, scenario calculation, learning plan and report controls verified.
+- Source repository: anonymous GitHub API returned public, private=false.
+- Expanded deployment database: SHA-256 equals manifest; SQLite quick_check=ok.
+  National 2025 snapshot contains 830 detailed occupation rows. Observation
+  years are 2022, 2023, 2024 and 2025.
+- No tracked files matched the checked personal profile/workspace/report export
+  or secret-configuration filename patterns. This is a filename check, not a
+  comprehensive historical secret scan or security certification.
+- Existing automated tests cover old workspace imports, scenario recalculation,
+  backup round trips, missing data, regional price formulas and report escaping.
+
+Findings and corrections
+- README still reported 75 tests. Updated it to the current dated result.
+- First-time usability instructions did not cover the new comparison and
+  sensitivity feature. Updated the task and submission-access guidance.
+
+Important interpretation
+- Exposure is not job-loss probability and is not a ranking term.
+- Recommendations use self-assessed skills and an optional wage preference;
+  education and self-reported qualification preferences are explicit filters.
+- History/interests text is not scored; licences are not verified automatically.
+- Regional purchasing-power proxies combine 2025 wages with 2024 BEA prices.
+  They are not a household budget or cash income. Simulator income stays nominal.
+- Missing wages, exposure or price matches are not replaced with zero.
+- Session progress requires a workspace backup; a report cannot restore it.
+
+Not established by this check
+- Whether a real first-time classmate understands and completes the task unaided.
+- Completeness of the final statement, MLA references, video or AI appendix.
+- Cross-device automatic persistence, future uptime, every browser/device,
+  Docker builds, or the completeness of a security audit.
+
+No blocking functional defect was reproduced within the tested scope. Passing
+tests and a successful browser workflow do not guarantee an error-free system.

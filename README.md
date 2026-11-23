@@ -22,7 +22,7 @@ Use Python 3.12. Install requirements-dev.txt, then run:
     python -m pytest tests -q
     streamlit run app.py
 
-The application is deployed on Streamlit Community Cloud and has been checked in an independent anonymous browser. The current workflow suite contains 75 passing tests. All 11 pages also returned ready through an isolated running server, including the fictional example, saved scenario and report workflow. Docker builds remain untested locally.
+The application is deployed on Streamlit Community Cloud and has been checked in an independent anonymous browser. On 23 November 2026, all 101 tests passed. All 11 pages also returned ready through an isolated running server, including the fictional example, saved scenario and report workflow, with no server warnings or tracebacks. Anonymous online access and the end-to-end workflow were checked again on that date. Docker builds remain untested locally. See `docs/INDEPENDENT_CHECK_2026-11-23.txt` for scope and limitations.
 
 A Dockerfile is included for compatible container hosts. It listens on port 7860. Docker itself was not available for a local container-build test. Hugging Face is optional; confirm its current account/plan requirements before choosing it.
 

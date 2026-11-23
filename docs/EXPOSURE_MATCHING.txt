@@ -1,0 +1,41 @@
+Exposure matching policy - version 4.7
+
+Current BLS occupations are retained even when exposure data is missing.
+Default lists contain all 830 occupations. Optional exposure-only filters on
+Home and data pages keep occupations with at least one available metric.
+
+Exact source-code records take precedence per metric. The reviewed whitelist
+contains eight one-to-one computer occupation pairs from the official 2018 SOC
+Manual, checked in Appendices A and B (PDF pages 230 and 252):
+2018 SOC -> 2010 SOC
+15-1211 -> 15-1121
+15-1212 -> 15-1122
+15-1221 -> 15-1111
+15-1231 -> 15-1152
+15-1232 -> 15-1151
+15-1241 -> 15-1143
+15-1244 -> 15-1142
+15-1251 -> 15-1131
+Source: https://www.bls.gov/soc/2018/soc_2018_manual.pdf
+
+Scores are unchanged historical references, not newly measured current-category
+estimates. Original source SOC, matching method, file and crosswalk URL are
+retained in source details and target report exports. The mapping does not
+establish unchanged tasks or current AI capabilities. Definitions may have
+editorial changes. No title-only guesses, splitting, weighted averaging or
+multi-predecessor merging are performed. Other unmatched codes remain missing.
+
+Coverage: 673 exact-code occupations plus eight reviewed historical references
+equals 681 of 830 occupations with at least one metric; 149 remain unmatched.
+Missing or partially missing metrics are labelled with an explicit statement
+that no available data match exists at present. Missing data is never zero.
+
+Dashboard, recommendations, comparisons, reports and Home coverage share the
+same resolver. Exposure remains a comparison reference, not a ranking term.
+Raw data and the database snapshot are unchanged. Resolved results are cached
+read-only by database path, modification timestamp and size; callers get copies.
+
+Verification: 106 regression tests passed, including exact source-value retention,
+exact-record precedence, split/merge exclusions, missing-data wording, filtering
+and unchanged recommendation score formulas. The isolated live runtime also
+checked all eleven pages and the comparison-to-report workflow.

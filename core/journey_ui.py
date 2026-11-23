@@ -68,8 +68,7 @@ def journey_state(state):
 @st.cache_data(ttl=300,max_entries=2)
 def overview(version):
     catalog=d.catalog()
-    coverage=d.frame('''SELECT COUNT(DISTINCT r.OCC_CODE) AS n FROM raw_national_m2025_dl r
-       JOIN exposure_scores e ON e.code=r.OCC_CODE AND e.code_type='SOC Code' WHERE r.O_GROUP='detailed' ''').iloc[0]['n']
+    coverage=len(d.exposure_coverage())
     return catalog,int(coverage)
 
 
@@ -90,6 +89,9 @@ def home():
             st.badge('Route A · No profile needed',color='blue')
             st.subheader('Explore an occupation')
             st.write('Start with three AI exposure indices, then review wages and skills. Compare locations and industries when you are ready.')
+            if st.toggle('Only show occupations with exposure data',key='home_only_exposure'):
+                cat=cat[cat.code.isin(d.exposure_coverage().code)]
+                if st.session_state.get('home_occupation') not in set(cat.code):st.session_state.pop('home_occupation',None)
             codes=list(cat.code);titles=cat.set_index('code').title.to_dict()
             preferred=(st.session_state.get('profile') or {}).get('current_soc','11-1011')
             soc=st.selectbox('Search or choose an occupation',codes,index=codes.index(preferred) if preferred in codes else 0,
@@ -128,7 +130,7 @@ def home():
         for label,page,key in [('Regional wages','Regional Analysis','home_regions'),('Industry wages','Industry Analysis','home_industries'),('Annual estimates','Historical Trends','home_history'),('Data and methodology','Data & Methodology','home_methods')]:
             st.button(label,on_click=go,args=(page,),key=key)
     with st.container(horizontal=True):
-        st.metric('Published BLS occupations',f'{len(cat):,}',border=True)
+        st.metric('Published BLS occupations',f'{len(overview(d.fingerprint())[0]):,}',border=True)
         st.metric('With a matching exposure index',f'{covered:,}',border=True)
         st.metric('Wage reference period','May 2025',border=True)
     with st.expander('Try a fictional example before entering personal information'):

@@ -16,7 +16,7 @@ def test_exposure_is_prominent_on_data_pages():
         assert at.metric[2].value==f'{scores["Image Generation AIOE"]:.3f}'
 
 def test_missing_exposure_not_zero():
-    present=set(d.frame("SELECT DISTINCT code FROM exposure_scores WHERE code_type='SOC Code'").code)
+    present=set(d.exposure_coverage().code)
     missing=next(code for code in d.catalog().code if code not in present)
     at=AppTest.from_file(str(d.ROOT/'app.py'),default_timeout=40).run()
     at.radio[0].set_value('Career Dashboard').run()

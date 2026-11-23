@@ -51,6 +51,7 @@ def side_by_side(profile,m,ranked,codes,state=None):
         rows.append({'code':code,'occupation':r.occupation,'comparison_score':float(r.comparison_score),
             'skill_alignment':float(r.skill_alignment),'assessment_coverage':float(r.assessment_coverage),
             'wage_benchmark':r.median_wage,'exposure_ai':r.exposure_ai,'exposure_language':r.exposure_language,'exposure_image':r.exposure_image,
+            'exposure_match':r.get('exposure_match','No available data match'),
             'education_pathway':r.education_pathway,'qualification_review':r.qualification_review,
             'preparation_groups':'; '.join(sorted({z['reference']['Name'] for z in zones if z.get('reference')})) or 'Not available',
             'learning_priorities':'; '.join(priorities.skill) or 'No assessed priorities available',
@@ -66,6 +67,7 @@ def display_comparison(rows,price_adjusted=False):
     names={'comparison_score':'Comparison score / 100','skill_alignment':'Assessed-skill alignment / 100','assessment_coverage':'Skills assessed (%)',
         'wage_benchmark':'Wage proxy (US-average price units)' if price_adjusted else 'Median annual wage (USD)',
         'exposure_ai':'General AI exposure','exposure_language':'Language-model exposure','exposure_image':'Image-generation exposure',
+        'exposure_match':'Exposure matching basis',
         'education_pathway':'Education pathway','qualification_review':'Qualification review (self-reported)',
         'preparation_groups':'O*NET preparation groups','learning_priorities':'Three assessed learning priorities',
         'saved_training_fees':'Latest saved scenario fees (USD)','saved_transition_months':'Latest saved transition duration (months)'}

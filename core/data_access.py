@@ -1,5 +1,6 @@
 """Explicit source selection; read-only SQLite access, no crosswalk fan-out."""
 from contextlib import contextmanager
+from functools import lru_cache
 from pathlib import Path
 import sqlite3
 import pandas as pd
@@ -89,8 +90,24 @@ def onet_profiles(soc,db=DB):
     return df
 
 def exposure(soc,db=DB):
-    return frame('''SELECT e.metric,e.score,s.path AS source_file FROM exposure_scores e
-       JOIN sources s ON s.id=e.source_id WHERE e.code_type='SOC Code' AND e.code=? ORDER BY e.metric''',(soc,),db)
+    rows=exposure_catalog(db)
+    return rows[rows.code==soc].sort_values('metric').reset_index(drop=True)
+
+def exposure_catalog(db=DB):
+    path=Path(db).resolve();stat=path.stat()
+    return _exposure_catalog(str(path),stat.st_mtime_ns,stat.st_size).copy()
+
+@lru_cache(maxsize=4)
+def _exposure_catalog(path,mtime_ns,size):
+    from core.exposure_mapping import resolve
+    raw=frame('''SELECT e.code,e.metric,e.score,s.path AS source_file FROM exposure_scores e
+       JOIN sources s ON s.id=e.source_id WHERE e.code_type='SOC Code' ''',db=path)
+    return resolve(raw,list(catalog(path).code))
+
+def exposure_coverage(db=DB):
+    rows=exposure_catalog(db)
+    return rows.groupby('code',as_index=False).agg(available_metrics=('metric','nunique'),
+        match_method=('match_method',lambda values:'; '.join(sorted(set(values)))))
 
 def skills(onet_code,db=DB):
     pieces=[]

@@ -197,16 +197,16 @@ def recommendations(profile,m):
     display=top.copy()
     for col in ['comparison_score','skill_alignment','assessment_coverage','wage_preference']:
         display[col]=(display[col]*100).round(1)
-    st.dataframe(display,hide_index=True,column_order=['occupation','comparison_score','assessment_coverage','median_wage','education_pathway','qualification_review','exposure_ai','exposure_language','exposure_image'],column_config={
+    st.dataframe(display,hide_index=True,column_order=['occupation','comparison_score','assessment_coverage','median_wage','education_pathway','qualification_review','exposure_ai','exposure_language','exposure_image','exposure_match'],column_config={
         'code':'SOC code','occupation':'Occupation','comparison_score':st.column_config.NumberColumn('Comparison score / 100',format='%.1f'),
         'skill_alignment':st.column_config.NumberColumn('Assessed-skill alignment / 100',format='%.1f'),
         'assessment_coverage':st.column_config.NumberColumn('Skills assessed (%)',format='%.1f'),
         'wage_preference':st.column_config.NumberColumn('Wage preference / 100',format='%.1f'),
         'median_wage':st.column_config.NumberColumn('Wage proxy (US-average price units)' if context['basis']=='Price-adjusted proxy' else 'Median annual wage (USD)',format='$%.0f'),
-        'education_pathway':'Education pathway','qualification_review':'Qualification review (self-reported)',
+        'education_pathway':'Education pathway','qualification_review':'Qualification review (self-reported)','exposure_match':'Exposure matching basis',
         'employment':'Published employment','exposure_ai':'AI exposure','exposure_language':'Language exposure','exposure_image':'Image exposure'},
         alt='Career comparisons with heuristic scores, assessed-skill coverage and national wage benchmarks')
-    st.caption('Exposure columns show raw source indices (general AI, language model and image generation), not percentages; blanks mean unavailable. Exposure is displayed for comparison, not used as a job-loss penalty in the ranking.')
+    st.caption('Exposure columns show raw source indices, not percentages. Blanks mean no available data match at present. Matching basis distinguishes exact source codes from reviewed historical references. No split/merge scores are inferred. Exposure does not affect ranking.')
     st.caption('Score and coverage columns are on a 0–100 scale, not probabilities. Low assessment coverage limits the comparison. Occupations without usable skill data are excluded; all wage records remain available in Career Dashboard.')
     if top.empty:
         st.info('No occupations match the current evidence and filter settings. Relax the education filter, review your qualification notes, change area, or use nominal wages / skills-only scoring. No missing wage or price estimate is replaced with zero.');return
@@ -394,6 +394,7 @@ def personal_report(profile,target,m):
     payload['target_qualification_review']=profile.get('qualification_reviews',{}).get(target,{'status':pathways.REVIEWS[0],'notes':''})
     payload['methodology']['education']='Optional exact category matching to modal education survey responses for at least one O*NET specialization. Ties retained; not a degree, subject or credential equivalence assessment. Qualification reviews are self-reported.'
     payload['methodology']['regional_prices']=regional.explanation()
+    payload['methodology']['exposure_matching']='Exact source-code matches take precedence. Eight reviewed one-to-one computer-occupation SOC 2010/2018 crosswalks may provide labelled historical references. Original scores and source codes are retained; split/merge mappings and similar-title guesses are not used. Missing metrics have no available data match at present.'
     payload['methodology']['recommendations']='Heuristic assessed-skill alignment plus an optional wage preference for the selected labour market and wage basis. Education and self-reported qualification preferences are filters, not extra numerical scores. Exposure is not a ranking term.'
     payload['methodology']['wages']='May 2025 nominal published wages for the selected region, or national wages when National is selected. Regional price-adjusted comparisons use a 2024 RPP proxy; simulator cash income always remains nominal USD.'
     preparation.panel(target)

@@ -41,7 +41,7 @@ def test_home_does_not_create_sample_personal_data():
     assert at.session_state['profile']=={}
     assert len(at.metric)==3
     assert at.metric[0].value=='830'
-    assert at.metric[1].value=='673'
+    assert at.metric[1].value=='681'
     assert not at.exception and not at.error
 
 

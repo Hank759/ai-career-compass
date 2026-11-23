@@ -86,3 +86,12 @@ are recomputed from current inputs, not restored as authoritative cached outputs
 
 Scoring details, price methodology and education/qualification editing are grouped
 in expanders, keeping the main shortlist, target selection and exposure visible.
+
+## Exposure coverage (4.7)
+
+Exposure now combines exact-code records with eight explicitly labelled historical
+references verified against the official BLS one-to-one SOC crosswalk. Coverage is
+681 of 830 occupations. The remaining 149 retain wage/skill functionality and
+display "No available exposure data match at present". Home and data pages offer
+an exposure-only filter; no occupations are deleted. Split/merge classifications
+remain unresolved. See `docs/EXPOSURE_MATCHING.txt` for source codes and policy.

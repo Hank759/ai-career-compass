@@ -101,12 +101,14 @@ def recommend(profile,m,weight=0.8,wages=None):
     out['comparison_score']=out.skill_alignment
     mask=out.wage_preference.notna()
     out.loc[mask,'comparison_score']=weight*out.loc[mask,'skill_alignment']+(1-weight)*out.loc[mask,'wage_preference']
-    raw=d.frame("SELECT code,metric,score FROM exposure_scores WHERE code_type='SOC Code'")
+    raw=d.exposure_catalog()
     if raw.duplicated(['code','metric']).any():
         raise ValueError('Ambiguous exposure source records')
     exposure=raw.pivot(index='code',columns='metric',values='score').rename(columns={
         'AIOE':'exposure_ai','Language Modeling AIOE':'exposure_language','Image Generation AIOE':'exposure_image'})
     out=out.merge(exposure,left_on='code',right_index=True,how='left')
+    methods=raw.groupby('code').match_method.agg(lambda values:'; '.join(sorted(set(values))))
+    out['exposure_match']=out.code.map(methods).fillna('No available data match')
     return out.dropna(subset=['comparison_score']).sort_values(['comparison_score','code'],ascending=[False,True]).reset_index(drop=True)
 
 
@@ -174,5 +176,5 @@ def report(profile,target,m,scenario=None,completed=None):
        'recommendations':'Heuristic weighted assessed-skill alignment plus optional national median-wage preference. Not a suitability or hiring probability.',
        'wages':'Nominal USD, US national May 2025 published estimates; not personal salary predictions.',
        'simulation':'User-assumed deterministic scenario; excludes taxes, financing, discounting and job-search uncertainty.',
-       'classification':'12 combined occupations remain unresolved; exact exposure-code matches are not a full vintage crosswalk.',
+       'classification':'12 combined occupations remain unresolved. Exact exposure-code matches plus eight reviewed one-to-one historical computer-occupation mappings do not constitute a complete vintage crosswalk.',
        'history':'Separate annual OEWS estimates, not a longitudinal panel or a causal AI effect.'}}

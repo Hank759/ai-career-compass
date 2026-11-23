@@ -20,6 +20,12 @@ def render(page):
             methodology(version)
             return
         occupations=load('catalog',version)
+        coverage=load('exposure_coverage',version)
+        only_exposure=st.toggle('Only show occupations with exposure data',key='data_only_exposure')
+        if only_exposure:
+            occupations=occupations[occupations.code.isin(coverage.code)]
+            if st.session_state.get('career_soc') not in set(occupations.code):st.session_state.pop('career_soc',None)
+        st.caption(f'{len(coverage)} of {len(load("catalog",version))} occupations have at least one exact-code or reviewed historical exposure reference. Filtering does not delete wage or skill records.')
         soc=choose('Occupation (BLS published classification)',occupations,'career_soc')
         exposure_panel(soc,version,page)
         if page=='Career Dashboard':
@@ -115,9 +121,15 @@ def exposure_panel(soc,version,context='Career Dashboard'):
             value=values.get(metric)
             st.metric(label,f'{float(value):.3f}' if pd.notna(value) else 'Not available',
                       border=True,help='Original source index. Negative values are valid. This is not a percentage or a probability of job loss.')
-    st.caption('Source: Felten exposure datasets. These are three distinct indices, not a combined risk score or job-loss probability. Exact SOC-code matching only; source and current classification versions are not fully reconciled.')
+    st.caption('Source: Felten exposure datasets. These are three distinct indices, not a combined risk score or job-loss probability. Exact-code records take precedence; selected reviewed one-to-one SOC crosswalks provide historical references. Classification versions are not fully reconciled.')
+    mapped=scores[scores.match_method=='Mapped historical reference']
+    if not mapped.empty:
+        st.info(f'Historical reference: SOC {soc} is linked to source SOC '+', '.join(sorted(set(mapped.source_code)))+'. The original scores are unchanged. This is not a newly measured estimate for the current classification.')
+        st.markdown('[Official BLS one-to-one classification crosswalk](https://www.bls.gov/soc/2018/soc_2018_manual.pdf)')
     if scores.empty:
-        st.info(f'No exact-code exposure estimate is available for SOC {soc}. Missing data is not zero exposure, and no value is inferred from a similar job title.')
+        st.info(f'No available exposure data match at present for SOC {soc}. Missing data is not zero exposure. Wage and skill information may still be available; no score is inferred from a similar job title.')
+    elif len(values)<3:
+        st.info('No available data match at present for the metrics marked Not available. Available indices remain displayed separately; missing values are not zero.')
     if context in ('Regional Analysis','Industry Analysis'):
         st.caption('Occupation-level reference only: these values do not change by region or industry. They are not regional AIGE or industry AIIE estimates.')
     with st.expander('How to read these exposure indices'):
@@ -144,6 +156,11 @@ def methodology(version):
                        'occupation_mapping_audit.csv','text/csv',key='download_mapping')
     st.markdown('[BLS classification and combined-occupation explanations](https://www.bls.gov/oes/oes_ques.htm)')
     st.caption('Candidate components come from the BLS FAQ historical classification table; they are not a verified 2025-to-current-O*NET crosswalk. They are shown for review only. No combined score, component employment split, or automatic skill average is calculated.')
-    st.write('Personal Profile, annual historical estimates, heuristic career comparisons, learning plans and assumption-based transition scenarios are now available. Profiles persist only in session unless exported. BEA purchasing-power adjustment remains unimplemented; scenario costs are not individual job-loss predictions.')
+    st.subheader('Exposure classification references')
+    from core.exposure_mapping import PAIRS,SOURCE
+    st.write('Exact-code exposure records take precedence. Eight individually reviewed one-to-one computer-occupation mappings provide labelled historical source references. No score is calculated for split, merged or unreviewed classifications. This is a limited reviewed list, not a complete crosswalk.')
+    st.dataframe(pd.DataFrame([{'Current SOC':current,'Historical source SOC':old} for current,old in PAIRS.items()]),hide_index=True,alt='Eight reviewed historical SOC references used for occupational exposure only')
+    st.markdown('[BLS SOC Manual, Appendices A and B]('+SOURCE+')')
+    st.write('Profiles persist only in session unless exported. Regional purchasing-power proxies use 2024 BEA prices with 2025 wages; simulator cash flows remain nominal USD. Scenario costs are assumptions, not individual job-loss predictions.')
 
 UI_COPY_REVISION = 'english-20261120'
